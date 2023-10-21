@@ -1,0 +1,72 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
+
+const mdPosts = await Astro.glob("../../content/blog/*.md");
+const mdxPosts = await Astro.glob("../../content/blog/*.mdx");
+
+const allPosts = [...mdPosts, ...mdxPosts];
+
+const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+
+const uniqueTags = [
+	...new Set(allPosts.map((post) => post.frontmatter.tags).flat()),
+];
+
+const objLength = (object) => {
+	var length = 0;
+	for (var key in object) {
+		if (object.hasOwnProperty(key)) {
+			++length;
+		}
+	}
+	return length;
+};
+
+const getTagCount = () => {
+	const result = {};
+	uniqueTags.forEach((tag) => {
+		const filteredPosts = allPosts.filter((post) =>
+			post.frontmatter.tags.includes(tag)
+		);
+		result[tag] = objLength(filteredPosts);
+	});
+	return result;
+};
+
+const tagCount = getTagCount();
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="flex flex-wrap gap-2">
+				{
+					tags.map((tag) => (
+						<p class="my-2 font-semibold text-md">
+							<a
+								class="rounded-md bg-zinc-200 hover:bg-zinc-300 "
+								href={`/tags/${tag}`}
+							>
+								<span class="px-2 py-1 text-black rounded-tl-md rounded-bl-md bg-inherit">
+									{tag}
+								</span>
+								<span class="px-2 py-1 text-black bg-orange-400 rounded-tr-md rounded-br-md">
+									{tagCount[tag]}
+								</span>
+							</a>
+						</p>
+					))
+				}
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
