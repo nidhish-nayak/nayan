@@ -1,6 +1,6 @@
 const HeroSection = () => {
 	return (
-		<section class="grid items-end justify-center grid-cols-3 gap-8 mt-10">
+		<section class="grid items-end justify-center grid-cols-3 gap-8 my-10">
 			<p class="text-md max-w-[400px] col-span-1 row-start-1">
 				Design and Lorem ipsum dolor, sit amet consectetur adipisicing elit.
 				Error eaque similique quae ullam.
