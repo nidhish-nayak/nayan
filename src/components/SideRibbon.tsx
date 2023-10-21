@@ -1,6 +1,6 @@
 const SideRibbon = () => {
 	return (
-		<div class="hidden fixed right-4 bottom-0 md:flex flex-col w-6 h-[17rem] items-center justify-between">
+		<div class="z-50 hidden fixed right-4 bottom-0 md:flex flex-col w-6 h-[17rem] items-center justify-between">
 			<div class="flex flex-col space-y-6">
 				<a
 					title="Sat Naing's Github Profile"
