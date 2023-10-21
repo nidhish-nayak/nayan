@@ -11,14 +11,49 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, "");
 
 <a
 	href={href}
+	id="link"
 	class:list={[className, { active: isActive }]}
 	{...props}
-	class="flex flex-col items-center justify-center px-4 font-sans text-lg text-black md:block"
+	class="flex flex-col items-center justify-center font-sans text-sm uppercase text-black md:block dark:text-white p-1"
 >
 	<slot />
 </a>
-<style>
+<style lang="scss">
 	a {
 		font-family: "Jost", sans-serif;
+		position: relative;
+	}
+
+	a::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		border-radius: 4px;
+		background-color: black;
+		bottom: -1px;
+		left: 0;
+		transform-origin: right;
+		transform: scaleX(0);
+		transition: transform 0.3s ease-in-out;
+	}
+
+	:global(.dark) a::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		border-radius: 4px;
+		background-color: white;
+		bottom: -1px;
+		left: 0;
+		transform-origin: right;
+		transform: scaleX(0);
+		transition: transform 0.3s ease-in-out;
+	}
+
+	a:hover::before {
+		transform-origin: left;
+		transform: scaleX(1);
 	}
 </style>

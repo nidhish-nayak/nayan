@@ -79,6 +79,10 @@ main {
 	padding: 3em 0em;
 }
 
+header {
+	background-color: white;
+}
+
 h1,
 h2,
 h3,
@@ -132,10 +136,6 @@ a {
 
 .dark a {
 	color: white;
-}
-
-a:hover {
-	color: var(--accent);
 }
 
 p {
@@ -219,6 +219,10 @@ hr {
 mark {
 	padding: 2px 8px;
 	border-radius: 2px;
+}
+
+img {
+	max-width: 100%;
 }
 
 @media (max-width: 720px) {
