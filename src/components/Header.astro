@@ -1,16 +1,18 @@
 ---
 import Hamburger from "./Hamburger.astro";
 import HeaderLink from "./HeaderLink.astro";
+import Logo from "./Logo.astro";
 import ThemeIcon from "./ThemeIcon.astro";
 ---
 
 <header>
 	<nav
-		class="flex items-center justify-between px-4 h-16 pt-4 pb-4 dark:bg-black bg-white mx-auto max-w-screen-2xl"
+		class="relative flex items-center justify-between h-16 px-4 pt-4 pb-4 mx-auto bg-white dark:bg-black max-w-screen-2xl"
 	>
+		<Logo />
 		<Hamburger />
-		<div class="gap-8 md:flex ml-auto">
-			<div class="hidden gap-4 md:flex justify-center items-center">
+		<div class="gap-8 ml-auto md:flex">
+			<div class="items-center justify-center hidden gap-4 md:flex">
 				<HeaderLink href="/">Home</HeaderLink>
 				<HeaderLink href="/blog">Blog</HeaderLink>
 				<HeaderLink href="/about">About</HeaderLink>
@@ -28,6 +30,10 @@ import ThemeIcon from "./ThemeIcon.astro";
 	}
 
 	nav a.active {
-		border-bottom-color: #cecece;
+		border-bottom-color: var(--accent);
+	}
+
+	:global(.dark) nav a.active {
+		border-bottom-color: #4d4d4d;
 	}
 </style>

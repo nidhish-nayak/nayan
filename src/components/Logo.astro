@@ -1,0 +1,25 @@
+<a href="/">
+	<div></div>
+</a>
+
+<style>
+	div {
+		position: absolute;
+		top: 4px;
+		width: 60px;
+		height: 100%;
+		background-image: url(../assets/logo-light.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+
+	:global(.dark) div {
+		width: 60px;
+		height: 100%;
+		background-image: url(../assets/logo-dark.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+</style>

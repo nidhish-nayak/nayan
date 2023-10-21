@@ -1,6 +1,6 @@
 const SideRibbon = () => {
 	return (
-		<div class="hidden fixed right-10 bottom-0 md:flex flex-col w-6 h-[17rem] items-center justify-between">
+		<div class="hidden fixed right-4 bottom-0 md:flex flex-col w-6 h-[17rem] items-center justify-between">
 			<div class="flex flex-col space-y-6">
 				<a
 					title="Sat Naing's Github Profile"
@@ -11,7 +11,7 @@ const SideRibbon = () => {
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
 						height="24"
-						class="hover:fill-teal-600"
+						class="hover:fill-rose-600"
 					>
 						<path
 							fill-rule="evenodd"
@@ -23,7 +23,7 @@ const SideRibbon = () => {
 				<a
 					title="Sat Naing's LinkedIn Profile"
 					href="https://www.linkedin.com/in/satnaing/"
-					class="hover:fill-teal-600"
+					class="hover:fill-rose-600"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ const SideRibbon = () => {
 				<a
 					title="Check Sat Naing on Dev.to"
 					href="https://dev.to/satnaing"
-					class="hover:fill-teal-600"
+					class="hover:fill-rose-600"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@ const SideRibbon = () => {
 				<a
 					title="Sat Naing's Profile on Facebook"
 					href="https://www.facebook.com/satnaing.dev"
-					class="hover:fill-teal-600"
+					class="hover:fill-rose-600"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,7 @@ const SideRibbon = () => {
 					</svg>
 				</a>
 			</div>
-			<div class="w-40 h-1 rotate-90 bg-[#1D2a35]"></div>
+			<div class="w-40 h-[2px] rotate-90 bg-[#1D2a35]"></div>
 		</div>
 	);
 };
