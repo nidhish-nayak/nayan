@@ -1,6 +1,6 @@
 .mygrid-01 {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 400px 1fr;
   gap: 2em;
 
   h2,
@@ -12,7 +12,8 @@
 
 .mygrid-02 {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 400px;
+  justify-items: end;
   gap: 2em;
 
   h2,
