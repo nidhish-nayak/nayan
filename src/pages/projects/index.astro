@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+import BaseHead from "../../components/BaseHead.astro";
+import Footer from "../../components/Footer.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+import Header from "../../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
+
+const projects = (await getCollection("projects")).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section>
+				<ul>
+					{
+						projects.map((project) => (
+							<li>
+								<a href={`/blog/${project.slug}/`}>
+									<img
+										width={720}
+										height={360}
+										src={project.data.image}
+										alt="blogImage"
+										loading="lazy"
+										decoding="async"
+									/>
+									<h4 class="title">{project.data.title}</h4>
+									<p class="date">
+										<FormattedDate date={project.data.pubDate} />
+									</p>
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

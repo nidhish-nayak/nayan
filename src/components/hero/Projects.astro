@@ -1,8 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import "./Projects.scss";
 
 const projects = await getCollection("projects");
+console.log(projects);
 ---
 
 <section class="w-full md:w-[97%] mt-24 border-t border-zinc-300">
@@ -12,8 +14,16 @@ const projects = await getCollection("projects");
 			projects.map((project, index) =>
 				index % 2 === 0 ? (
 					<div class="mygrid-01">
-						<a href="/project" class="before:hidden">
-							<div class="w-[400px] h-[400px] bg-rose-600 justify-self-start float-right" />
+						<a href={`/projects/${project.slug}`} class="before:hidden">
+							<div class="w-[400px] h-[400px]  justify-self-start float-right overflow-hidden">
+								<Image
+									src={project.data.image}
+									width={400}
+									height={400}
+									alt="project-image"
+									class="object-center w-[400px] h-[400px] rounded-none hover:scale-125 transition-all"
+								/>
+							</div>
 						</a>
 						<article class="self-start xl:w-[70%] flex flex-col justify-between h-full">
 							<div class="flex flex-col justify-evenly gap-4">
@@ -28,9 +38,11 @@ const projects = await getCollection("projects");
 								</ul>
 							</div>
 							<div class="flex gap-8">
-								<a href="/">Github &#8599; </a>
+								<a href={project.data.github} target="_blank">
+									Github &#8599;{" "}
+								</a>
 								<a
-									href="/"
+									href={`/projects/${project.slug}`}
 									class="underline decoration-rose-600 underline-offset-[10px]"
 								>
 									Read More
@@ -53,17 +65,28 @@ const projects = await getCollection("projects");
 								</ul>
 							</div>
 							<div class="flex gap-8">
-								<a href="/">Github &#8599; </a>
+								<a href={project.data.github} target="_blank">
+									Github &#8599;{" "}
+								</a>
 								<a
-									href="/"
+									href={`/projects/${project.slug}`}
 									class="underline decoration-rose-600 underline-offset-[10px]"
 								>
 									Read More
 								</a>
 							</div>
 						</article>
-
-						<div class="w-[400px] h-[400px] bg-teal-600 justify-self-start" />
+						<a href={`/projects/${project.slug}`} class="before:hidden">
+							<div class="w-[400px] h-[400px]  justify-self-start float-left overflow-hidden">
+								<Image
+									src={project.data.image}
+									width={400}
+									height={400}
+									alt="project-image"
+									class="object-center w-[400px] h-[400px] rounded-none hover:scale-125 transition-all"
+								/>
+							</div>
+						</a>
 					</div>
 				)
 			)
