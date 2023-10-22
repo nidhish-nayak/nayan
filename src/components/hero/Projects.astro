@@ -1,40 +1,15 @@
 ---
+import { MY_PROJECTS } from "../../consts";
 import "./Projects.scss";
 
-const myProjects = [
-	{
-		title: "Data Analysis",
-		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores, deleniti obcaecati animi hic officiis? Laudantiummagni iusto quo ratione asperiores!",
-		image: "",
-	},
-	{
-		title: "Data Manipulation",
-		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores, deleniti obcaecati animi hic officiis? Laudantiummagni iusto quo ratione asperiores!",
-		image: "",
-	},
-	{
-		title: "Data Cleaning",
-		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores, deleniti obcaecati animi hic officiis? Laudantiummagni iusto quo ratione asperiores!",
-		image: "",
-	},
-
-	{
-		title: "Data Warehouse",
-		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores, deleniti obcaecati animi hic officiis? Laudantiummagni iusto quo ratione asperiores!",
-		image: "",
-	},
-];
+const projects = MY_PROJECTS;
 ---
 
 <section class="w-full md:w-[97%] mt-24 border-t border-zinc-300">
 	<p class="mb-8">My Work</p>
 	<div class="flex flex-col gap-32">
 		{
-			myProjects.map((project, index) =>
+			projects.map((project, index) =>
 				index % 2 === 0 ? (
 					<div class="mygrid-01">
 						<a href="/project" class="before:hidden">

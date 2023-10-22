@@ -10,6 +10,7 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, "");
 ---
 
 <a
+	rel="prefetch-intent"
 	href={href}
 	class:list={[className, { active: isActive }]}
 	{...props}
