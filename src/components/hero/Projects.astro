@@ -1,8 +1,8 @@
 ---
-import { MY_PROJECTS } from "../../consts";
+import { getCollection } from "astro:content";
 import "./Projects.scss";
 
-const projects = MY_PROJECTS;
+const projects = await getCollection("projects");
 ---
 
 <section class="w-full md:w-[97%] mt-24 border-t border-zinc-300">
@@ -15,23 +15,16 @@ const projects = MY_PROJECTS;
 						<a href="/project" class="before:hidden">
 							<div class="w-[400px] h-[400px] bg-rose-600 justify-self-start float-right" />
 						</a>
-						<article class="self-start w-[70%] flex flex-col justify-between h-full">
+						<article class="self-start xl:w-[70%] flex flex-col justify-between h-full">
 							<div class="flex flex-col justify-evenly gap-4">
-								<h2 class="">{project.title}</h2>
-								<p>{project.description}</p>
+								<h2 class="">{project.data.title}</h2>
+								<p>{project.data.description}</p>
 								<ul class="flex gap-4 mt-4">
-									<li class="bg-zinc-200 dark:bg-zinc-900 py-[2px] px-2 rounded-xl">
-										React
-									</li>
-									<li class="bg-zinc-200 dark:bg-zinc-900 py-[2px] px-2 rounded-xl">
-										Node
-									</li>
-									<li class="bg-zinc-200 dark:bg-zinc-900 py-[2px] px-2 rounded-xl">
-										DAX
-									</li>
-									<li class="bg-zinc-200 dark:bg-zinc-900 py-[2px] px-2 rounded-xl">
-										Git
-									</li>
+									{project.data.tools.map((tool: string) => (
+										<li class="bg-zinc-200 dark:bg-zinc-900 py-[2px] px-3 rounded-md text-lg">
+											{tool}
+										</li>
+									))}
 								</ul>
 							</div>
 							<div class="flex gap-8">
@@ -48,22 +41,15 @@ const projects = MY_PROJECTS;
 				) : (
 					<div class="mygrid-02">
 						<article class="justify-between items-end h-full flex flex-col">
-							<div class="flex flex-col w-[70%] justify-evenly items-end text-right gap-4">
-								<h2 class="ml-auto">{project.title}</h2>
-								<p>{project.description}</p>
+							<div class="flex flex-col xl:w-[70%] justify-evenly items-end text-right gap-4">
+								<h2 class="ml-auto">{project.data.title}</h2>
+								<p>{project.data.description}</p>
 								<ul class="flex gap-4 mt-4">
-									<li class="bg-zinc-200 dark:bg-zinc-900 py-[2px] px-2 rounded-xl">
-										React
-									</li>
-									<li class="bg-zinc-200 dark:bg-zinc-900 py-[2px] px-2 rounded-xl">
-										Node
-									</li>
-									<li class="bg-zinc-200 dark:bg-zinc-900 py-[2px] px-2 rounded-xl">
-										DAX
-									</li>
-									<li class="bg-zinc-200 dark:bg-zinc-900 py-[2px] px-2 rounded-xl">
-										Git
-									</li>
+									{project.data.tools.map((tool: string) => (
+										<li class="bg-zinc-200 dark:bg-zinc-900 py-[2px] px-3 rounded-md text-lg">
+											{tool}
+										</li>
+									))}
 								</ul>
 							</div>
 							<div class="flex gap-8">
