@@ -1,7 +1,9 @@
 ---
+import About from "../components/hero/AboutMe.tsx";
 import HeroSection from "../components/hero/HeroSection.tsx";
-import Projects from "../components/hero/Projects.tsx";
-import SideRibbon from "./SideRibbon.tsx";
+import Skills from "../components/hero/Skills.tsx";
+import SideRibbon from "./SideRibbon.astro";
+import Projects from "./hero/Projects.astro";
 ---
 
 <main
@@ -9,5 +11,7 @@ import SideRibbon from "./SideRibbon.tsx";
 >
 	<HeroSection />
 	<Projects />
+	<Skills />
+	<About />
 	<SideRibbon />
 </main>

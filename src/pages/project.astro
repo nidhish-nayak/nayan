@@ -1,0 +1,20 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+		></script>
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<div class="w-[400px] h-[400px] bg-rose-600"></div>
+		<Footer />
+	</body>
+</html>
