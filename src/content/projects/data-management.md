@@ -5,7 +5,7 @@ description: >-
   deleniti obcaecati animi hic officiis? Laudantiummagni iusto quo ratione
   asperiores!
 pubDate: '2023-10-23T20:25:38+05:30'
-image: /project-03.webp
+image: /project-02.webp
 tools:
   - MySQL
   - Python
