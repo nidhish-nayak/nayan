@@ -8,59 +8,39 @@ export const SITE_DESCRIPTION = "Welcome to my portfolio!";
 // You can update any below fields as per your needs.
 export const MAIN_HEADING = "Nayan Malkhedkar";
 export const MAIN_DESCRIPTION =
-	"Design and Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error eaque similique quae ullam.";
+	"Developing a unique synergy of data driven insights and dynamic analytics to propel your success forward.";
 export const JOB_ROLE = "Data Analyst.";
 export const JOB_CITY = "Bangalore";
 export const JOB_NATION = "India";
 
-export const MY_PROJECTS = [
-	{
-		title: "Data Analysis",
+export const MY_SKILLS = {
+	"data-analytics": {
+		title: "Data Analytics",
 		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores, deleniti obcaecati animi hic officiis? Laudantiummagni iusto quo ratione asperiores!",
-		image: "",
-		tools: ["PowerBI", "Jupiter"],
-		github: "",
+			"Analyzing data to summarize its main characteristics and gain insights using statistical and visualization techniques.",
+		long: "Analyzing data to summarize its main characteristics and gain insights using statistical and visualization techniques. This involves summarizing the main characteristics of the data, such as its distribution, central tendencies, and variations, as well as identifying correlations and anomalies.",
+		skills: ["SQL", "Python", "APIs", "R Language", "Excel"],
 	},
-	{
-		title: "Data Analysis",
+	"data-visualization": {
+		title: "Data Visualization",
 		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores, deleniti obcaecati animi hic officiis? Laudantiummagni iusto quo ratione asperiores!",
-		image: "",
-		tools: ["PowerBI", "Jupiter"],
-		github: "",
+			"Creating visual representations of data to convey insights and trends effectively.",
+		skills: [
+			"PowerBI",
+			"DAX",
+			"Dashboard Development",
+			"Python",
+			"Jupyter",
+			"Excel",
+		],
 	},
-	{
-		title: "Data Analysis",
+	"data-management": {
+		title: "Data Management",
 		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores, deleniti obcaecati animi hic officiis? Laudantiummagni iusto quo ratione asperiores!",
-		image: "",
-		tools: ["PowerBI", "Jupiter"],
-		github: "",
+			"Setting up databases and data storage systems for efficient data access and retrieval.",
+		skills: ["DBMS", "MySQL", "Git", "MongoDB"],
 	},
-	{
-		title: "Data Analysis",
-		description:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores, deleniti obcaecati animi hic officiis? Laudantiummagni iusto quo ratione asperiores!",
-		image: "",
-		tools: ["PowerBI", "Jupiter"],
-		github: "",
-	},
-];
-
-export const MY_SKILLS = [
-	"PowerBI",
-	"Jupiter",
-	"Python",
-	"MySQL",
-	"DAX",
-	"MSExcel",
-	"Data Cleaning",
-	"Data Analytics",
-	"Git",
-	"VSCode",
-	"DBMS",
-];
+};
 
 export const MY_SOCIAL_LINKS = {
 	github: "https://github.com/nidhish-nayak",
@@ -71,3 +51,15 @@ export const MY_SOCIAL_LINKS = {
 	email: "nidhibelthangady@gmail.com",
 	mobile: "91+ 9113651048",
 };
+
+// "PowerBI",
+// 	"Jupiter",
+// 	"Python",
+// 	"MySQL",
+// 	"DAX",
+// 	"MSExcel",
+// 	"Data Cleaning",
+// 	"Data Analytics",
+// 	"Git",
+// 	"VSCode",
+// 	"DBMS",
