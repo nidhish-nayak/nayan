@@ -2,7 +2,7 @@ import { MY_SKILLS } from "../../consts";
 
 const Skills = () => {
 	return (
-		<section class="w-full md:w-[97%] mt-24 border-t border-zinc-300">
+		<section class="w-full md:w-[97%] border-t border-zinc-300">
 			<p class="">Services</p>
 			<div class="flex flex-col md:grid grid-cols-2 mt-12">
 				<div class="flex flex-col row-span-2 md:p-12 border-t md:border-b">
