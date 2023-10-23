@@ -1,26 +1,6 @@
-.mygrid-01 {
-  display: grid;
-  grid-template-columns: 400px 1fr;
-  gap: 2em;
-
-  h2,
-  p {
-    margin: 0;
-    padding: 0;
-  }
-}
-
-.mygrid-02 {
-  display: grid;
-  grid-template-columns: 1fr 400px;
-  justify-items: end;
-  gap: 2em;
-
-  h2,
-  p {
-    margin: 0;
-    padding: 0;
-  }
+ul::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 a {

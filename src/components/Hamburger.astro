@@ -3,7 +3,7 @@ import HeaderLink from "./HeaderLink.astro";
 ---
 
 <div
-	class="fixed z-30 flex w-11/12 p-1 font-semibold text-sm rounded text-black shadow-sm bg-[#f9fafb] drop-shadow-lg glassmorphism justify-evenly items-end nav-links md:hidden bottom-4"
+	class="fixed z-30 flex items-end text-base w-11/12 sm:w-[96%] px-1 text-black rounded shadow-sm drop-shadow-lg glassmorphism justify-evenly nav-links md:hidden bottom-4"
 	id="myLinks"
 >
 	<HeaderLink href="/">
@@ -15,6 +15,7 @@ import HeaderLink from "./HeaderLink.astro";
 				viewBox="-4.5 0 32 32"
 				version="1.1"
 				xmlns="http://www.w3.org/2000/svg"
+				class="dark:fill-white"
 			>
 				<title>home</title>
 				<path
@@ -33,6 +34,7 @@ import HeaderLink from "./HeaderLink.astro";
 				id="Layer_1"
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 16 16"
+				class="dark:fill-white"
 			>
 				<path
 					class="cls-1"
@@ -45,8 +47,59 @@ import HeaderLink from "./HeaderLink.astro";
 			</svg>
 		</span><span>Blog</span>
 	</HeaderLink>
-	<HeaderLink href="/about">About</HeaderLink>
-	<HeaderLink href="/tags">Tags</HeaderLink>
+	<HeaderLink href="/about">
+		<span>
+			<svg
+				fill="#000000"
+				version="1.1"
+				class="dark:fill-white"
+				id="Capa_1"
+				xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink"
+				width="22"
+				height="22"
+				viewBox="0 0 27.021 27.021"
+				xml:space="preserve"
+			>
+				<g>
+					<g>
+						<path
+							d="M20.443,16.782c-0.963-0.308-2-0.552-3.09-0.722c2.342-1.299,3.929-3.794,3.929-6.663c0-4.207-3.41-7.617-7.617-7.617
+			s-7.617,3.41-7.617,7.617c0,2.868,1.587,5.364,3.929,6.663C4.223,16.958,0,19.896,0,23.389h18.35
+			c-0.31-0.66-0.496-1.39-0.496-2.166C17.855,19.32,18.904,17.674,20.443,16.782z"
+						></path>
+						<path
+							d="M23.004,17.206c-2.218,0-4.018,1.797-4.018,4.019c0,2.217,1.8,4.016,4.018,4.016c2.219,0,4.018-1.799,4.018-4.016
+			C27.02,19.003,25.223,17.206,23.004,17.206z M24.757,23.921l-1.753-0.922l-1.753,0.922l0.335-1.952l-1.418-1.383l1.96-0.283
+			l0.876-1.777l0.876,1.777l1.96,0.283l-1.418,1.383L24.757,23.921z"
+						></path>
+					</g>
+				</g>
+			</svg>
+		</span>
+		<span> About</span>
+	</HeaderLink>
+	<HeaderLink href="/tags">
+		<span>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				stroke-width="1.25"
+				stroke="currentColor"
+				fill="none"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+					d="M7.859 6h-2.834a2.025 2.025 0 0 0 -2.025 2.025v2.834c0 .537 .213 1.052 .593 1.432l6.116 6.116a2.025 2.025 0 0 0 2.864 0l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-6.117 -6.116a2.025 2.025 0 0 0 -1.431 -.593z"
+				></path><path
+					d="M17.573 18.407l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-7.117 -7.116"
+				></path><path d="M6 9h-.01"></path></svg
+			>
+		</span>
+		<span>Tags</span>
+	</HeaderLink>
 </div>
 
 <style lang="scss">
@@ -57,7 +110,9 @@ import HeaderLink from "./HeaderLink.astro";
 		}
 	}
 
-	:global(.dark) .nav-links {
+	:global(.dark) a {
+		color: white;
+		opacity: 1;
 	}
 
 	.glassmorphism {
@@ -65,6 +120,11 @@ import HeaderLink from "./HeaderLink.astro";
 		backdrop-filter: blur(8px);
 		-webkit-backdrop-filter: blur(8px);
 		border-radius: 10px;
-		border: 1px solid rgba(255, 255, 255, 0.18);
+		border: 1px solid rgba(221, 221, 221, 0.18);
+	}
+
+	:global(.dark) .glassmorphism {
+		background: rgba(78, 78, 78, 0.25);
+		border: 1px solid rgba(43, 43, 43, 0.18);
 	}
 </style>
