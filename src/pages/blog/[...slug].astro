@@ -16,5 +16,9 @@ const { Content } = await post.render();
 ---
 
 <BlogPost {...post.data}>
-	<Content />
+	<article
+		class="prose-sm xl:prose-xl 2xl:prose-2xl md:prose-md lg:prose-lg dark:prose-invert dark:prose-td:text-white dark:prose-li:text-white"
+	>
+		<Content />
+	</article>
 </BlogPost>

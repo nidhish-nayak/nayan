@@ -169,63 +169,6 @@ img {
 	border-radius: 8px;
 }
 
-code {
-	padding: 2px 6px;
-	background-color: rgb(var(--gray-dark));
-	border-radius: 2px;
-	color: white;
-}
-
-.dark code {
-	padding: 2px 8px;
-	background-color: rgb(var(--gray-dark));
-	border-radius: 2px;
-}
-
-pre {
-	margin-bottom: 1em;
-	padding: 1.5em;
-	border-radius: 8px;
-}
-
-pre > code {
-	all: unset;
-}
-
-blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 1em 0;
-	font-size: 1.333em;
-}
-
-hr {
-	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
-}
-
-.dark hr {
-	border: none;
-	border-top: 1px solid #cecece;
-}
-
-.dark th {
-	color: #ececec;
-}
-
-.dark td {
-	color: white;
-}
-
-mark {
-	padding: 2px 8px;
-	border-radius: 2px;
-}
-
-img {
-	max-width: 100%;
-}
-
 p > a {
 	color: var(--accent);
 }
