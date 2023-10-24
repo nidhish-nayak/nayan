@@ -70,12 +70,12 @@ export const MY_EXPERIENCE = [
 ];
 
 export const MY_SOCIAL_LINKS = {
-	github: "https://github.com/nidhish-nayak",
-	website: "https://nidhish.vercel.app",
-	blog: "https://nidhish-blog.vercel.app",
-	linkedin: "https://www.linkedin.com/in/nidhishdnayak/",
-	instagram: "https://www.instagram.com/nidhish_nayak/",
-	email: "nidhibelthangady@gmail.com",
-	mobile: "91+ 9113651048",
+	github: "https://github.com/nayan-malkhedkar",
+	website: "https://nayan-blog.vercel.app",
+	blog: "https://nayan-blog.vercel.app/blog",
+	linkedin: "https://www.linkedin.com/in/nayan-malkhedkar/",
+	instagram: "https://www.instagram.com/nayan_malkhedkar/",
+	email: "nayan.malkhedkar@gmail.com",
+	mobile: "91+ 8867831881",
 	resume: "",
 };

@@ -12,45 +12,45 @@ import { MY_SOCIAL_LINKS } from "../../consts";
 		></script>
 		<script type="text/javascript">
 		(function () {
-		  // https://dashboard.emailjs.com/admin/account
-		  emailjs.init("user_72V5ZrKiDqB9prAC597MF");
+			// https://dashboard.emailjs.com/admin/account
+			emailjs.init("user_72V5ZrKiDqB9prAC597MF");
 		})();
 		</script>
 		<script type="text/javascript">
 		window.onload = function () {
-		  document
-		    .getElementById("contact-form")
-		    .addEventListener("submit", function (event) {
-		      event.preventDefault();
+			document
+				.getElementById("contact-form")
+				.addEventListener("submit", function (event) {
+					event.preventDefault();
 
-		      const myButton = document.getElementById("submitButton");
-		      const mySvg = document.getElementById("mySvg");
-		      const mySvg2 = document.getElementById("mySvg2");
-		      mySvg.classList.toggle("hidden");
-		      mySvg2.classList.toggle("hidden");
+					const myButton = document.getElementById("submitButton");
+					const mySvg = document.getElementById("mySvg");
+					const mySvg2 = document.getElementById("mySvg2");
+					mySvg.classList.toggle("hidden");
+					mySvg2.classList.toggle("hidden");
 
-		      // generate a five digit number for the contact_number variable
-		      this.contact_number.value = (Math.random() * 100000) | 0;
-		      // these IDs from the previous steps
-		      emailjs.sendForm("service_s3whmkb", "template_nl0lpci", this).then(
-		        function () {
-		          console.log("SUCCESS!");
-		          mySvg.classList.toggle("hidden");
-		          myButton.innerHTML = "SENT";
-		          myButton.classList.remove("bg-black");
-		          myButton.classList.add("bg-green-500");
-		          // mySvg2.classList.toggle("hidden");
-		        },
-		        function (error) {
-		          console.log("FAILED...", error);
-		          mySvg.classList.toggle("hidden");
-		          mySvg2.classList.toggle("hidden");
-		          myButton.innerHTML = "FAILED";
-		          myButton.classList.remove("bg-black");
-		          myButton.classList.add("bg-red-500");
-		        }
-		      );
-		    });
+					// generate a five digit number for the contact_number variable
+					this.contact_number.value = (Math.random() * 100000) | 0;
+					// these IDs from the previous steps
+					emailjs.sendForm("service_s3whmkb", "template_nl0lpci", this).then(
+						function () {
+							console.log("SUCCESS!");
+							mySvg.classList.toggle("hidden");
+							myButton.innerHTML = "SENT";
+							myButton.classList.remove("bg-black");
+							myButton.classList.add("bg-green-500");
+							// mySvg2.classList.toggle("hidden");
+						},
+						function (error) {
+							console.log("FAILED...", error);
+							mySvg.classList.toggle("hidden");
+							mySvg2.classList.toggle("hidden");
+							myButton.innerHTML = "FAILED";
+							myButton.classList.remove("bg-black");
+							myButton.classList.add("bg-red-500");
+						}
+					);
+				});
 		};
 		</script>
 	</head>
@@ -131,8 +131,8 @@ import { MY_SOCIAL_LINKS } from "../../consts";
 						></button
 					>
 				</form>
-				<section class="flex flex-col gap-4 mt-16 md:gap-8 md:px-4">
-					<p class="max-w-[400px] p-0 m-0">
+				<section class="flex flex-col gap-4 md:gap-10 md:px-4">
+					<p class="max-w-[380px] p-0 m-0">
 						If you have any requests or questions, please don’t hesitate to use
 						the form.
 					</p>
