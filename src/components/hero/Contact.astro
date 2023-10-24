@@ -1,0 +1,184 @@
+---
+import { MY_SOCIAL_LINKS } from "../../consts";
+---
+
+<!doctype html>
+<html>
+	<head>
+		<title>Contact</title>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+		(function () {
+		  // https://dashboard.emailjs.com/admin/account
+		  emailjs.init("user_72V5ZrKiDqB9prAC597MF");
+		})();
+		</script>
+		<script type="text/javascript">
+		window.onload = function () {
+		  document
+		    .getElementById("contact-form")
+		    .addEventListener("submit", function (event) {
+		      event.preventDefault();
+
+		      const myButton = document.getElementById("submitButton");
+		      const mySvg = document.getElementById("mySvg");
+		      const mySvg2 = document.getElementById("mySvg2");
+		      mySvg.classList.toggle("hidden");
+		      mySvg2.classList.toggle("hidden");
+
+		      // generate a five digit number for the contact_number variable
+		      this.contact_number.value = (Math.random() * 100000) | 0;
+		      // these IDs from the previous steps
+		      emailjs.sendForm("service_s3whmkb", "template_nl0lpci", this).then(
+		        function () {
+		          console.log("SUCCESS!");
+		          mySvg.classList.toggle("hidden");
+		          myButton.innerHTML = "SENT";
+		          myButton.classList.remove("bg-black");
+		          myButton.classList.add("bg-green-500");
+		          // mySvg2.classList.toggle("hidden");
+		        },
+		        function (error) {
+		          console.log("FAILED...", error);
+		          mySvg.classList.toggle("hidden");
+		          mySvg2.classList.toggle("hidden");
+		          myButton.innerHTML = "FAILED";
+		          myButton.classList.remove("bg-black");
+		          myButton.classList.add("bg-red-500");
+		        }
+		      );
+		    });
+		};
+		</script>
+	</head>
+	<body>
+		<section class="w-full md:w-[97%] border-t border-b pb-4 border-zinc-300">
+			<h1 class="text-[1.953em] sm:text-[2.441em] md:text-[3.052em] my-4">
+				Would love to hear from you &downarrow; .
+			</h1>
+			<div class="items-end justify-between md:flex">
+				<form id="contact-form" class="flex flex-col sm:min-w-[400px] mt-16">
+					<input
+						class="p-2 bg-zinc-300"
+						type="hidden"
+						name="contact_number"
+						required
+					/>
+					<label>Name</label>
+					<input
+						class="p-2 bg-zinc-300"
+						type="text"
+						name="user_name"
+						required
+					/>
+					<label>Email</label>
+					<input
+						class="p-2 bg-zinc-300"
+						type="email"
+						name="user_email"
+						required
+					/>
+					<label>Message</label>
+					<textarea
+						name="message"
+						class="h-32 p-2 bg-zinc-300"
+						placeholder="Enter message here..."
+						required></textarea>
+					<button
+						type="submit"
+						id="submitButton"
+						value="Send"
+						class="w-20 flex group items-center justify-evenly mt-4 p-1 text-[1rem] text-white transition-all bg-black hover:text-white hover:bg-rose-600"
+						>SEND
+						<svg
+							id="mySvg"
+							class="hidden text-white animate-spin"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							width="16"
+							height="16"
+						>
+							<circle
+								class="opacity-25"
+								cx="12"
+								cy="12"
+								r="10"
+								stroke="currentColor"
+								stroke-width="4"></circle>
+							<path
+								class="opacity-75"
+								fill="currentColor"
+								d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+							></path>
+						</svg>
+						<svg
+							id="mySvg2"
+							viewBox="0 0 60 60"
+							width="12"
+							height="12"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+							class="p-0 m-0"
+							><path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="m.819 50.513 8.307 8.238 38.423-38.454-.059 28.89h11.638V.424H10.47l-.14 11.564h28.983L.819 50.513Zm55.31-47.09v42.764V3.424Z"
+								fill="currentColor"></path></svg
+						></button
+					>
+				</form>
+				<section class="flex flex-col gap-4 mt-16 md:gap-8 md:px-4">
+					<p class="max-w-[400px] p-0 m-0">
+						If you have any requests or questions, please don’t hesitate to use
+						the form.
+					</p>
+					<p class="m-0">
+						<span class="font-semibold">Email:</span>
+						 nayan.malkhedkar@gmail.com
+					</p>
+					<div>
+						<p class="p-0 m-0 text-base">QUICK LINKS</p>
+						<ul class="flex items-center gap-2">
+							<li>
+								<a
+									href="/"
+									class="text-lg -ml-[1px] underline decoration-1 hover:no-underline border border-transparent hover:border-dotted hover:bg-zinc-300 hover:border-black"
+									>HOME</a
+								>
+							</li>
+							<span class="w-8 h-[2px] bg-black"></span>
+							<li>
+								<a
+									href="/projects"
+									class="text-lg -ml-[1px] underline decoration-1 hover:no-underline border border-transparent hover:border-dotted hover:bg-zinc-300 hover:border-black"
+									>PROJECTS</a
+								>
+							</li>
+							<span class="w-8 h-[2px] bg-black"></span>
+							<li>
+								<a
+									href="/blog"
+									class="text-lg -ml-[1px] underline decoration-1 hover:no-underline border border-transparent hover:border-dotted hover:bg-zinc-300 hover:border-black"
+									>BLOGS</a
+								>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<p class="p-0 m-0 text-base">EXTRAS</p>
+						<a
+							href={MY_SOCIAL_LINKS.resume}
+							target="_blank"
+							class="text-lg -ml-[1px] underline decoration-1 hover:no-underline border border-transparent hover:border-dotted hover:bg-zinc-300 hover:border-black"
+							>RESUME</a
+						>
+					</div>
+				</section>
+			</div>
+		</section>
+	</body>
+</html>

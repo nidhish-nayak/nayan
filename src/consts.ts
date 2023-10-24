@@ -42,6 +42,33 @@ export const MY_SKILLS = {
 	},
 };
 
+export const MY_EXPERIENCE = [
+	{
+		company: "Tata Consultancy Services",
+		role: "System Engineer",
+		startDate: "July 2021",
+		endDate: null,
+		location: "Bangalore, India",
+		pointers: [
+			"Design and draft test scripts as per user stories and requirements.",
+			"Worked on integration, functional, system, user-acceptance and regression test suits.",
+		],
+		image: "tcs",
+	},
+	{
+		company: "Entuple Technologies",
+		role: "Internship",
+		startDate: "June, 2020",
+		endDate: "Aug, 2020",
+		location: "Bangalore, India",
+		pointers: [
+			"Verification and design using Verilog HDL on electronic systems.",
+			"Simulations for verification, test analysis, fault grading and logic synthesis.",
+		],
+		image: "entuple",
+	},
+];
+
 export const MY_SOCIAL_LINKS = {
 	github: "https://github.com/nidhish-nayak",
 	website: "https://nidhish.vercel.app",
@@ -50,16 +77,5 @@ export const MY_SOCIAL_LINKS = {
 	instagram: "https://www.instagram.com/nidhish_nayak/",
 	email: "nidhibelthangady@gmail.com",
 	mobile: "91+ 9113651048",
+	resume: "",
 };
-
-// "PowerBI",
-// 	"Jupiter",
-// 	"Python",
-// 	"MySQL",
-// 	"DAX",
-// 	"MSExcel",
-// 	"Data Cleaning",
-// 	"Data Analytics",
-// 	"Git",
-// 	"VSCode",
-// 	"DBMS",

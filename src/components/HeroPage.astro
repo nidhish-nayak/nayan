@@ -1,17 +1,30 @@
 ---
-import About from "../components/hero/AboutMe.tsx";
 import HeroSection from "../components/hero/HeroSection.tsx";
-import Skills from "../components/hero/Skills.tsx";
 import SideRibbon from "./SideRibbon.astro";
+import Contact from "./hero/Contact.astro";
+import Experience from "./hero/Experience.astro";
 import Projects from "./hero/Projects.astro";
+import Services from "./hero/Services.tsx";
 ---
 
-<main
-	class="flex flex-col items-start justify-start min-h-screen p-4 max-w-screen-2xl"
->
-	<HeroSection />
-	<Projects />
-	<Skills />
-	<About />
-	<SideRibbon />
-</main>
+<!doctype html>
+<html>
+	<head>
+		<title>Hero Page</title>
+		<script type="text/javascript">
+		window.onload = function () { };
+		</script>
+	</head>
+	<body>
+		<main
+			class="flex flex-col items-start justify-start min-h-screen p-4 max-w-screen-2xl"
+		>
+			<HeroSection />
+			<Projects />
+			<Services />
+			<Experience />
+			<Contact />
+			<SideRibbon />
+		</main>
+	</body>
+</html>

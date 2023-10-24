@@ -1,9 +1,16 @@
 ---
-const today = new Date();
+const today = new Date().getFullYear();
 ---
 
-<footer>
-	<section class="flex flex-col items-center justify-center p-2 bg-zinc-300">
+<footer class="relative mt-12">
+	<a
+		href="#"
+		class="absolute transition-all right-0 w-[43px] p-1 mr-4 text-center border rounded-full cursor-pointer md:mr-16 border-zinc-300 bottom-20 md:bottom-4 hover:text-white before:hidden hover:bg-black bg-rose-600 animate-bounce"
+		>&uparrow;</a
+	>
+	<section
+		class="flex flex-col items-center justify-center px-2 pt-2 pb-20 md:p-2 bg-zinc-300"
+	>
 		<div>
 			<!-- Icons here and other footer content -->
 		</div>
@@ -12,7 +19,7 @@ const today = new Date();
 			<span>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					class="inline-block w-5 h-5 mx-1 mb-1"
+					class="inline-block w-5 h-5 mx-1 mb-1 fill-rose-600"
 					fill="none"
 					viewBox="0 0 24 24"
 					stroke="currentColor"
@@ -25,7 +32,7 @@ const today = new Date();
 					></path></svg
 				>
 			</span>
-			 by Nidhish Nayak
+			 by Nidhish Nayak &copy; {today}
 		</div>
 	</section>
 </footer>

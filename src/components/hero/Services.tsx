@@ -1,6 +1,6 @@
 import { MY_SKILLS } from "../../consts";
 
-const Skills = () => {
+const Services = () => {
 	return (
 		<section class="w-full md:w-[97%] border-t border-zinc-300">
 			<p class="">Services</p>
@@ -48,4 +48,4 @@ const Skills = () => {
 	);
 };
 
-export default Skills;
+export default Services;
