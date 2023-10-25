@@ -26,10 +26,9 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
 				display: block;
 				margin: 0 auto;
 				border-radius: 12px;
-				box-shadow: var(--box-shadow);
 			}
 			.prose {
-				width: 720px;
+				width: 1080px;
 				max-width: calc(100% - 2em);
 				margin: auto;
 				padding: 1em;
@@ -86,7 +85,7 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
 								alt="blogImage"
 								loading="lazy"
 								decoding="async"
-								class="object-cover w-3/4 h-full mx-auto md:w-3/5 lg:w-1/2"
+								class="object-cover w-full h-full mx-auto shadow-xl md:w-3/5 lg:w-1/2"
 							/>
 						)
 					}
@@ -103,11 +102,11 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
 								)
 							}
 						</div>
-						<h1 class="text-2xl sm:text-5xl md:text-inherit">{title}</h1>
+						<h1 class="text-3xl sm:text-5xl md:text-inherit">{title}</h1>
 						<ul class="p-0 list-none">
 							{
 								tags?.map((tag) => (
-									<li class="text-xl bg-rose-600">
+									<li class="text-sm sm:text-lg bg-rose-600 hover:bg-rose-800">
 										<a class="text-white" href={`/tags/${tag}`}>
 											{tag}
 										</a>
@@ -115,7 +114,7 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
 								))
 							}
 						</ul>
-						<hr />
+						<hr class="m-0 sm:my-12" />
 					</div>
 					<slot />
 				</div>

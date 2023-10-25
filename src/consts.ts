@@ -69,6 +69,45 @@ export const MY_EXPERIENCE = [
 	},
 ];
 
+export const ABOUT_ME = {
+	title: "About Me",
+	descriptionOne:
+		"Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aenim quos at asperiores perferendis iusto, dolorum consectetur adipisci fugiat excepturi voluptates repellat culpa tenetur iste sit vero, doloremque quidem.",
+	descriptionTwo:
+		"Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aenim quos at asperiores perferendis iusto, dolorum consectetur adipisci fugiat excepturi voluptates repellat culpa tenetur iste sit vero, doloremque quidem.",
+	skills: [
+		"PowerBI",
+		"Excel",
+		"Python",
+		"DAX",
+		"Numpy",
+		"Pandas",
+		"Jupyter",
+		"Dashboard",
+		"Data Cleaning",
+		"Data Analysis",
+		"Data Management",
+		"Git",
+	],
+	hobbies: ["Singing", "Santoor", "Reading", "Cultural Events", "Debates"],
+	certifications: [
+		{
+			title: "DAX Certified",
+			description: "Analyzing and designing data constructs using DAX.",
+			id: "13FRC88op0",
+			source: "Linkedin",
+			link: "",
+		},
+		{
+			title: "Machine Learning",
+			description: "Certification by IRTQ for advanced ML&AI",
+			id: "sDSND132oeT",
+			source: "ITRReC",
+			link: "",
+		},
+	],
+};
+
 export const MY_SOCIAL_LINKS = {
 	github: "https://github.com/nayan-malkhedkar",
 	website: "https://nayan-blog.vercel.app",

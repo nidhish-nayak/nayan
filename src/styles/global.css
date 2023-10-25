@@ -125,6 +125,18 @@ h5 {
 	font-size: 1.25em;
 }
 
+pre {
+	width: min-content;
+}
+
+table {
+	max-width: min-content;
+}
+
+article .prose img {
+	width: 75%;
+}
+
 strong,
 b {
 	font-weight: 700;
