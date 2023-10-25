@@ -41,20 +41,22 @@ const filteredPosts = posts.filter((post: any) =>
 		<Header />
 		<main class="min-h-screen p-4">
 			<div
-				class="p-0 m-0 mt-2 mb-8 flex md:flex-row flex-col justify-between md:items-center"
+				class="flex flex-col justify-between p-0 m-0 mt-2 mb-8 md:flex-row md:items-center"
 			>
 				<h2 class="p-0 m-0 dark:m-0">
-					Blogs related to <span class="text-rose-600">{tag}</span>
+					Blogs related to <span class="text-rose-600 dark:text-[#05ce91]"
+						>{tag}</span
+					>
 				</h2>
 				<a
 					href="/tags"
-					class="text-lg w-fit md:m-0 mt-4 bg-zinc-300 p-2 hover:bg-rose-600 hover:text-white rounded"
+					class="text-lg w-fit md:m-0 mt-4 dark:bg-zinc-800 dark:hover:bg-[#05ce91] bg-zinc-300 p-2 hover:bg-rose-600 hover:text-white rounded"
 					>All Tags</a
 				>
 			</div>
 			<section class="flex flex-wrap gap-4">
 				<ul
-					class="flex flex-wrap items-center justify-center xl:justify-between gap-8"
+					class="flex flex-wrap items-center justify-center gap-8 xl:justify-between"
 				>
 					{
 						filteredPosts.map((post: any) => (
