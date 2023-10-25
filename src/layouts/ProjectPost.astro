@@ -5,16 +5,16 @@ import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import Header from "../components/Header.astro";
 
-type Props = CollectionEntry<"blog">["data"];
+type Props = CollectionEntry<"projects">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage, tags } =
+const { title, description, pubDate, updatedDate, image, tools, github } =
 	Astro.props;
 ---
 
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
+		<style lang="scss">
 			main {
 				max-width: 100%;
 				margin: 0;
@@ -33,6 +33,11 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
 				margin: auto;
 				padding: 1em;
 				color: rgb(var(--gray-dark));
+
+				@media (max-width: 480px) {
+					margin: 0 auto;
+					padding: 0;
+				}
 			}
 			.title {
 				margin-bottom: 1em;
@@ -49,14 +54,12 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
 				align-items: center;
 				flex-wrap: wrap;
 				gap: 1em;
-				margin: 0.5em 0 1em 0;
-			}
-			.title li {
-				padding: 0.25em 0.5em;
-				border-radius: 15px;
+				margin: 1em 0 1em 0;
 			}
 			.date {
 				margin-bottom: 0.5em;
+				margin-top: 1em;
+				font-size: 1rem;
 				color: rgb(var(--gray));
 			}
 			.last-updated-on {
@@ -77,15 +80,15 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
 			<article>
 				<div class="hero-image">
 					{
-						heroImage && (
+						image && (
 							<img
 								width={400}
 								height={260}
-								src={heroImage}
+								src={image}
 								alt="blogImage"
 								loading="lazy"
 								decoding="async"
-								class="object-cover w-full h-full mx-auto shadow-xl md:w-3/5 lg:w-1/2"
+								class="object-cover w-full h-full mx-auto shadow-xl md:max-w-screen-sm lg:max-w-screen-sm xl:max-w-screen-md"
 							/>
 						)
 					}
@@ -105,14 +108,9 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
 						<h1 class="text-3xl sm:text-5xl md:text-inherit">{title}</h1>
 						<ul class="p-0 list-none">
 							{
-								tags?.map((tag) => (
-									<li class="text-sm sm:text-lg bg-rose-600 dark:bg-[#05ce91] dark:hover:bg-[#1e7e61] hover:bg-rose-800">
-										<a
-											class="px-2 text-white rounded-full"
-											href={`/tags/${tag}`}
-										>
-											{tag}
-										</a>
+								tools?.map((tool) => (
+									<li class="p-0 px-3 py-1 m-0 text-sm text-black rounded-full sm:text-lg bg-zinc-300">
+										{tool}
 									</li>
 								))
 							}

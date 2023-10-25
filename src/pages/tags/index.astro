@@ -15,9 +15,9 @@ const uniqueTags = [
 	...new Set(allPosts.map((post) => post.frontmatter.tags).flat()),
 ];
 
-const objLength = (object) => {
-	var length = 0;
-	for (var key in object) {
+const objLength = (object: any) => {
+	let length = 0;
+	for (let key in object) {
 		if (object.hasOwnProperty(key)) {
 			++length;
 		}
@@ -26,7 +26,7 @@ const objLength = (object) => {
 };
 
 const getTagCount = () => {
-	const result = {};
+	const result: { [key: string]: number } = {};
 	uniqueTags.forEach((tag) => {
 		const filteredPosts = allPosts.filter((post) =>
 			post.frontmatter.tags.includes(tag)
@@ -39,26 +39,24 @@ const getTagCount = () => {
 const tagCount = getTagCount();
 ---
 
-<!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
-		<main>
-			<section class="flex flex-wrap gap-2">
+		<main class="min-h-screen p-4">
+			<h2 class="p-0 m-0 mt-2 mb-8 dark:m-0 dark:mt-2 dark:mb-8">All Tags</h2>
+			<section class="flex flex-wrap gap-4">
 				{
+					// Map through the tags and render a link for each tag with its count
 					tags.map((tag) => (
-						<p class="my-2 font-semibold text-md">
-							<a
-								class="rounded-md bg-zinc-200 hover:bg-zinc-300 "
-								href={`/tags/${tag}`}
-							>
-								<span class="px-2 py-1 text-black rounded-tl-md rounded-bl-md bg-inherit">
+						<p class="my-2 text-xl">
+							<a class="rounded-md group" href={`/tags/${tag}`}>
+								<span class="px-4 py-2 text-black rounded-tl-full rounded-bl-full bg-zinc-300 group-hover:bg-zinc-400 bg-inherit">
 									{tag}
 								</span>
-								<span class="px-2 py-1 text-black bg-orange-400 rounded-tr-md rounded-br-md">
+								<span class="px-4 py-2 text-white rounded-tr-full rounded-br-full bg-rose-600 group-hover:bg-rose-700">
 									{tagCount[tag]}
 								</span>
 							</a>

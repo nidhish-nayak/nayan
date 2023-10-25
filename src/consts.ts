@@ -67,6 +67,18 @@ export const MY_EXPERIENCE = [
 		],
 		image: "entuple",
 	},
+	{
+		company: "PES University",
+		role: "B.Tech",
+		startDate: "June, 2017",
+		endDate: "Aug, 2021",
+		location: "Bangalore, India",
+		pointers: [
+			"Studied electronics and communications.",
+			"Graduated with First Class Honours.",
+		],
+		image: "pes",
+	},
 ];
 
 export const ABOUT_ME = {

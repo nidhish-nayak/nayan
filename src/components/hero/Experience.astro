@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import entuple from "../../assets/entuple.webp";
+import pes from "../../assets/pes.webp";
 import tcs from "../../assets/tcs.webp";
 import { MY_EXPERIENCE } from "../../consts";
 ---
@@ -21,16 +22,18 @@ import { MY_EXPERIENCE } from "../../consts";
 								{i.role}
 								<span class="text-zinc-500"> - {i.location}.</span>
 							</p>
-							<ul class="ml-5 list-disc marker:text-rose-600 max-w-[600px]">
+							<ul class="ml-5 list-disc marker:text-rose-600 dark:marker:text-[#05ce91] max-w-[600px]">
 								{i.pointers?.map((pointer) => (
 									<li>{pointer}</li>
 								))}
 							</ul>
 						</div>
 					</div>
-					<div class="hidden h-full md:mr-32 group-hover:block">
+					<div class="hidden h-full bg-white md:mr-32 group-hover:block">
 						<Image
-							src={i.image === "tcs" ? tcs : entuple}
+							src={
+								i.image === "tcs" ? tcs : i.image === "entuple" ? entuple : pes
+							}
 							height="200"
 							width="200"
 							class="hidden border lg:block shadow-2xl w-[200px] h-[200px] object-contain p-4"

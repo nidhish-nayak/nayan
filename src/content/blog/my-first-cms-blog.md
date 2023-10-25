@@ -3,7 +3,7 @@ title: My First CMS Blog
 description: This is CMS Description
 pubDate: "2023-10-19T17:46:34+05:30"
 heroImage: /data-analytics.jpg
-tags: ["astro"]
+tags: ["astro", "cms", "blogs"]
 ---
 
 # This is title of the markdown.

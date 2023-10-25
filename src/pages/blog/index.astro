@@ -30,14 +30,26 @@ const posts = (await getCollection("blog"))
 	</head>
 	<body>
 		<Header />
-		<main>
+		<main class="p-4">
 			<section>
-				<ul class="flex flex-wrap items-center justify-center gap-8">
+				<div class="flex items-center justify-between mt-2 mb-16">
+					<h2 class="p-0 m-0 dark:p-0 dark:m-0">Blogs</h2>
+					<span>
+						<a
+							href="/tags"
+							class="p-2 text-lg rounded bg-zinc-300 dark:bg-zinc-800 dark:hover:bg-[#05ce91] hover:bg-rose-600 hover:text-white"
+							>All Tags</a
+						>
+					</span>
+				</div>
+				<ul
+					class="flex flex-wrap items-center justify-center gap-8 xl:justify-between"
+				>
 					{
 						posts.map((post) => (
 							<li>
 								<a href={`/blog/${post.slug}/`}>
-									<div class="w-full h-full sm:w-[400px] sm:h-[260px] object-cover overflow-hidden rounded-none">
+									<div class="w-full h-full sm:w-[400px] sm:h-[260px] object-cover overflow-hidden rounded">
 										<img
 											width={400}
 											height={260}
@@ -49,7 +61,7 @@ const posts = (await getCollection("blog"))
 										/>
 									</div>
 									<h4 class="title">{post.data.title}</h4>
-									<p class="date text-zinc-600 dark:text-zinc-400">
+									<p class="text-base sm:text-lg date text-zinc-600 dark:text-zinc-400">
 										<FormattedDate date={post.data.pubDate} />
 									</p>
 								</a>

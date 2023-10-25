@@ -36,19 +36,56 @@ const filteredPosts = posts.filter((post: any) =>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			span {
-				color: orange;
-			}
-		</style>
 	</head>
 	<body>
 		<Header />
-		<main>
-			<section>
-				<h1>Blogs related to <span>{tag}</span></h1>
-				<ul>
-					{filteredPosts.map((post: any) => <li>{post.frontmatter.title}</li>)}
+		<main class="min-h-screen p-4">
+			<div
+				class="p-0 m-0 mt-2 mb-8 flex md:flex-row flex-col justify-between md:items-center"
+			>
+				<h2 class="p-0 m-0 dark:m-0">
+					Blogs related to <span class="text-rose-600">{tag}</span>
+				</h2>
+				<a
+					href="/tags"
+					class="text-lg w-fit md:m-0 mt-4 bg-zinc-300 p-2 hover:bg-rose-600 hover:text-white rounded"
+					>All Tags</a
+				>
+			</div>
+			<section class="flex flex-wrap gap-4">
+				<ul
+					class="flex flex-wrap items-center justify-center xl:justify-between gap-8"
+				>
+					{
+						filteredPosts.map((post: any) => (
+							<li>
+								<a
+									href={`/blog/${post.frontmatter.title
+										.toLowerCase()
+										.split(" ")
+										.join("-")}`}
+								>
+									<div class="w-full h-full sm:w-[400px] sm:h-[260px] object-cover overflow-hidden rounded">
+										<img
+											width={400}
+											height={260}
+											src={post.frontmatter.heroImage}
+											alt="blogImage"
+											loading="lazy"
+											decoding="async"
+											class="w-full h-full max-w-none sm:w-[400px] sm:h-[260px] object-cover hover:scale-125 transition-all rounded-none"
+										/>
+									</div>
+									<h4 class="title">{post.frontmatter.title}</h4>
+									<p class="text-base sm:text-lg date text-zinc-600 dark:text-zinc-400">
+										{new Date(post.frontmatter.pubDate)
+											.toDateString()
+											.slice(4, 15)}
+									</p>
+								</a>
+							</li>
+						))
+					}
 				</ul>
 			</section>
 		</main>

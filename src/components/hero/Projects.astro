@@ -40,11 +40,11 @@ const topProjects = projects.filter((project, index) => index <= 7);
 									<a
 										href={`/projects/${project.slug}`}
 										rel="prefetch-intent"
-										class="p-0 m-0 before:bg-rose-600"
+										class="p-0 m-0 before:bg-rose-600 dark:before:bg-[#05ce91]"
 									>
 										{project.data.title}
 									</a>
-									<p class="self-start text-lg text-zinc-300 dark:text-zinc-700">
+									<p class="self-start text-lg text-zinc-300 dark:text-zinc-500">
 										/0{index + 1}
 									</p>
 								</h2>
@@ -58,13 +58,17 @@ const topProjects = projects.filter((project, index) => index <= 7);
 								</ul>
 							</div>
 							<div class="flex gap-8 mt-6 md:mt-0">
-								<a href={project.data.github} target="_blank">
+								<a
+									href={project.data.github}
+									target="_blank"
+									class="dark:before:bg-white"
+								>
 									Github &#8599;{" "}
 								</a>
 								<a
 									href={`/projects/${project.slug}`}
 									rel="prefetch-intent"
-									class="underline decoration-rose-600 underline-offset-[10px]"
+									class="underline decoration-rose-600 dark:before:bg-white dark:decoration-[#05ce91] underline-offset-[10px]"
 								>
 									Read More
 								</a>
@@ -76,13 +80,13 @@ const topProjects = projects.filter((project, index) => index <= 7);
 						<article class="flex-col items-end justify-between hidden h-full md:flex">
 							<div class="flex flex-col xl:w-[70%] justify-evenly items-end text-right gap-4">
 								<h2 class="flex gap-4 p-0 m-0">
-									<p class="self-start text-lg text-zinc-300 dark:text-zinc-700">
+									<p class="self-start text-lg text-zinc-300 dark:text-zinc-500">
 										/0{index + 1}
 									</p>
 									<a
 										href={`/projects/${project.slug}`}
 										rel="prefetch-intent"
-										class="before:bg-rose-600"
+										class="before:bg-rose-600 dark:before:bg-[#05ce91]"
 									>
 										{project.data.title}
 									</a>
@@ -97,13 +101,17 @@ const topProjects = projects.filter((project, index) => index <= 7);
 								</ul>
 							</div>
 							<div class="flex gap-8">
-								<a href={project.data.github} target="_blank">
+								<a
+									href={project.data.github}
+									target="_blank"
+									class="dark:before:bg-white"
+								>
 									Github &#8599;{" "}
 								</a>
 								<a
 									href={`/projects/${project.slug}`}
 									rel="prefetch-intent"
-									class="underline decoration-rose-600 underline-offset-[10px]"
+									class="underline decoration-rose-600 dark:before:bg-white dark:decoration-[#05ce91] underline-offset-[10px]"
 								>
 									Read More
 								</a>
@@ -122,7 +130,7 @@ const topProjects = projects.filter((project, index) => index <= 7);
 						</a>
 						<article class="flex flex-col items-start justify-between h-full md:hidden">
 							<div class="flex flex-col xl:w-[70%] justify-evenly items-start text-left gap-4">
-								<h2 class="p-0 m-0">
+								<h2 class="flex flex-row xl:w-[70%] justify-evenly items-end text-right gap-4">
 									<a
 										href={`/projects/${project.slug}`}
 										rel="prefetch-intent"
@@ -130,6 +138,9 @@ const topProjects = projects.filter((project, index) => index <= 7);
 									>
 										{project.data.title}
 									</a>
+									<p class="self-start text-lg text-zinc-300 dark:text-zinc-500">
+										/0{index + 1}
+									</p>
 								</h2>
 								<p class="p-0 m-0">{project.data.description}</p>
 								<ul class="flex flex-wrap gap-4 mt-4">
@@ -141,7 +152,11 @@ const topProjects = projects.filter((project, index) => index <= 7);
 								</ul>
 							</div>
 							<div class="flex gap-8 mt-6 md:mt-0">
-								<a href={project.data.github} target="_blank">
+								<a
+									href={project.data.github}
+									target="_blank"
+									class="dark:before:bg-white"
+								>
 									Github &#8599;{" "}
 								</a>
 								<a
@@ -162,7 +177,7 @@ const topProjects = projects.filter((project, index) => index <= 7);
 		<a
 			href="/projects"
 			rel="prefetch-intent"
-			class="text-lg underline text-inherit hover:text-rose-600 underline-offset-2"
+			class="text-lg underline text-inherit hover:text-rose-600 dark:hover:text-[#05ce91] underline-offset-2"
 		>
 			All Works ({projectCount})
 		</a>

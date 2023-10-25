@@ -6,10 +6,10 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import SideRibbon from "../components/SideRibbon.astro";
 import {
-ABOUT_ME,
-MY_SOCIAL_LINKS,
-SITE_DESCRIPTION,
-SITE_TITLE,
+	ABOUT_ME,
+	MY_SOCIAL_LINKS,
+	SITE_DESCRIPTION,
+	SITE_TITLE,
 } from "../consts";
 ---
 
@@ -40,7 +40,7 @@ SITE_TITLE,
 						</p>
 						{
 							ABOUT_ME.hobbies.map((hobby) => (
-								<li class="px-3 py-1 text-lg rounded-full bg-zinc-300">
+								<li class="px-3 py-1 text-lg rounded-full bg-zinc-300 dark:bg-zinc-800">
 									{hobby}
 								</li>
 							))
@@ -48,7 +48,7 @@ SITE_TITLE,
 					</ul>
 				</div>
 				<span
-					class="relative inline-block shadow-2xl before:block before:absolute before:-inset-0 before:-skew-y-6 before:skew-x-6 before:bg-rose-600"
+					class="relative inline-block shadow-2xl before:block before:absolute before:-inset-0 before:-skew-y-6 before:skew-x-6 before:bg-rose-600 dark:before:bg-[#05ce91]"
 				>
 					<Image
 						src={nayan}
@@ -56,14 +56,16 @@ SITE_TITLE,
 						width={400}
 						height={400}
 						quality="max"
-						class="rounded-none relative object-cover w-[300px] md:w-[400px] md:h-[400px]"
+						class="rounded-none relative object-cover w-[300px] md:w-[400px] md:h-[400px] border dark:border-zinc-300"
 					/>
 				</span>
 			</article>
 			<section
-				class="my-24 md:w-[97%] flex flex-col lg:flex-row justify-evenly border-b items-center md:items-start border-t"
+				class="my-24 md:w-[97%] flex flex-col lg:flex-row justify-evenly border-b items-center md:items-start border-t dark:border-zinc-700"
 			>
-				<article class="flex flex-col items-center w-full p-8 lg:border-r">
+				<article
+					class="flex flex-col items-center w-full p-8 lg:border-r dark:border-zinc-700"
+				>
 					<h4 class="p-0 my-4">Certifications</h4>
 					<ul class="flex flex-col gap-6 list-decimal marker:text-zinc-300">
 						{
@@ -71,15 +73,17 @@ SITE_TITLE,
 								<li>
 									<div class="flex items-center">
 										<p class="w-full p-0 m-0">{certificate.title}</p>
-										<p class="p-0 m-0 ml-4 text-zinc-300">
+										<p class="p-0 m-0 ml-4 text-zinc-300 dark:text-zinc-400">
 											{certificate.source}
 										</p>
 									</div>
-									<p class="p-0 m-0 text-lg">{certificate.description}</p>
+									<p class="p-0 m-0 text-[14px] sm:text-lg">
+										{certificate.description}
+									</p>
 									<a
 										href={certificate.link}
 										target="_blank"
-										class="p-0 m-0 text-sm underline hover:text-rose-800 text-rose-400"
+										class="p-0 m-0 text-sm underline hover:text-rose-800 dark:text-[#67d1b1] dark:hover:text-[#05ce91] text-rose-400"
 									>
 										{certificate.id}
 									</a>
@@ -89,13 +93,13 @@ SITE_TITLE,
 					</ul>
 				</article>
 				<article
-					class="flex flex-col items-center w-full px-0 py-8 border-t lg:px-8 lg:border-t-0"
+					class="flex flex-col items-center w-full px-0 py-8 border-t lg:px-8 lg:border-t-0 dark:border-zinc-700"
 				>
 					<h4 class="p-0 my-4">Skills</h4>
 					<ul class="flex flex-wrap items-center justify-center gap-4 my-4">
 						{
 							ABOUT_ME.skills.map((skill) => (
-								<li class="px-3 py-1 text-lg rounded-full bg-zinc-300">
+								<li class="px-3 py-1 text-lg rounded-full bg-zinc-300 dark:bg-zinc-800">
 									{skill}
 								</li>
 							))
@@ -108,13 +112,15 @@ SITE_TITLE,
 				<a
 					href={MY_SOCIAL_LINKS.resume}
 					target="_blank"
-					class="p-0 px-2 m-0 text-lg underline hover:text-rose-600">RESUME</a
+					class="p-0 px-2 m-0 text-lg underline hover:text-rose-600 dark:hover:text-[#05ce91]"
+					>RESUME</a
 				>
 				<span>-----</span>
 				<a
 					href={MY_SOCIAL_LINKS.linkedin}
 					target="_blank"
-					class="p-0 px-2 m-0 text-lg underline hover:text-rose-600">LINKEDIN</a
+					class="p-0 px-2 m-0 text-lg underline hover:text-rose-600 dark:hover:text-[#05ce91]"
+					>LINKEDIN</a
 				>
 			</div>
 		</main>

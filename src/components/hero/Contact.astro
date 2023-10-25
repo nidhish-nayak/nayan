@@ -56,7 +56,9 @@ import { MY_SOCIAL_LINKS } from "../../consts";
 	</head>
 	<body>
 		<section class="w-full md:w-[97%] border-t border-b pb-4 border-zinc-300">
-			<h1 class="text-[1.953em] sm:text-[2.441em] md:text-[3.052em] my-4">
+			<h1
+				class="text-[1.953em] sm:text-[2.441em] md:text-[3.052em] my-4 dark:my-4"
+			>
 				Would love to hear from you &downarrow; .
 			</h1>
 			<div
@@ -64,21 +66,21 @@ import { MY_SOCIAL_LINKS } from "../../consts";
 			>
 				<form id="contact-form" class="flex flex-col sm:min-w-[400px] mt-16">
 					<input
-						class="p-2 bg-zinc-300"
+						class="p-2 bg-zinc-300 dark:bg-zinc-800"
 						type="hidden"
 						name="contact_number"
 						required
 					/>
 					<label>Name</label>
 					<input
-						class="p-2 bg-zinc-300"
+						class="p-2 bg-zinc-300 dark:bg-zinc-800"
 						type="text"
 						name="user_name"
 						required
 					/>
 					<label>Email</label>
 					<input
-						class="p-2 bg-zinc-300"
+						class="p-2 bg-zinc-300 dark:bg-zinc-800"
 						type="email"
 						name="user_email"
 						required
@@ -86,14 +88,14 @@ import { MY_SOCIAL_LINKS } from "../../consts";
 					<label>Message</label>
 					<textarea
 						name="message"
-						class="h-32 p-2 bg-zinc-300"
+						class="h-32 p-2 bg-zinc-300 dark:bg-zinc-800"
 						placeholder="Enter message here..."
 						required></textarea>
 					<button
 						type="submit"
 						id="submitButton"
 						value="Send"
-						class="w-20 flex group items-center justify-evenly mt-4 p-1 text-[1rem] text-white transition-all bg-black hover:text-white hover:bg-rose-600"
+						class="w-20 flex shadow-lg group items-center justify-evenly mt-4 p-1 text-[1rem] text-white transition-all bg-black dark:bg-zinc-300 dark:text-black dark:hover:bg-[#05ce91] hover:text-white hover:bg-rose-600"
 						>SEND
 						<svg
 							id="mySvg"
@@ -148,23 +150,23 @@ import { MY_SOCIAL_LINKS } from "../../consts";
 							<li>
 								<a
 									href="/"
-									class="text-lg -ml-[1px] underline decoration-1 hover:no-underline border border-transparent hover:border-dotted hover:bg-zinc-300 hover:border-black"
+									class="text-lg -ml-[1px] underline decoration-1 dark:hover:text-black hover:no-underline border border-transparent hover:border-dotted hover:bg-zinc-300 hover:border-black"
 									>HOME</a
 								>
 							</li>
-							<span class="w-8 h-[2px] bg-black"></span>
+							<span class="w-8 h-[2px] bg-black dark:bg-zinc-300"></span>
 							<li>
 								<a
 									href="/projects"
-									class="text-lg -ml-[1px] underline decoration-1 hover:no-underline border border-transparent hover:border-dotted hover:bg-zinc-300 hover:border-black"
+									class="text-lg -ml-[1px] underline decoration-1 dark:hover:text-black hover:no-underline border border-transparent hover:border-dotted hover:bg-zinc-300 hover:border-black"
 									>PROJECTS</a
 								>
 							</li>
-							<span class="w-8 h-[2px] bg-black"></span>
+							<span class="w-8 h-[2px] bg-black dark:bg-zinc-300"></span>
 							<li>
 								<a
 									href="/blog"
-									class="text-lg -ml-[1px] underline decoration-1 hover:no-underline border border-transparent hover:border-dotted hover:bg-zinc-300 hover:border-black"
+									class="text-lg -ml-[1px] underline decoration-1 dark:hover:text-black hover:no-underline border border-transparent hover:border-dotted hover:bg-zinc-300 hover:border-black"
 									>BLOGS</a
 								>
 							</li>
@@ -175,7 +177,7 @@ import { MY_SOCIAL_LINKS } from "../../consts";
 						<a
 							href={MY_SOCIAL_LINKS.resume}
 							target="_blank"
-							class="text-lg -ml-[1px] underline decoration-1 hover:no-underline border border-transparent hover:border-dotted hover:bg-zinc-300 hover:border-black"
+							class="text-lg -ml-[1px] underline decoration-1 dark:hover:text-black hover:no-underline border border-transparent hover:border-dotted hover:bg-zinc-300 hover:border-black"
 							>RESUME</a
 						>
 					</div>
