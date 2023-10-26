@@ -122,11 +122,12 @@ export const ABOUT_ME = {
 
 export const MY_SOCIAL_LINKS = {
 	github: "https://github.com/nayan-malkhedkar",
-	website: "https://nayan-blog.vercel.app",
-	blog: "https://nayan-blog.vercel.app/blog",
+	website: "https://nayan-m.vercel.app",
+	blog: "https://nayan-m.vercel.app/blog",
 	linkedin: "https://www.linkedin.com/in/nayan-malkhedkar/",
 	instagram: "https://www.instagram.com/nayan_malkhedkar/",
 	email: "nayan.malkhedkar@gmail.com",
 	mobile: "91+ 8867831881",
+	admin: "https://nayan-m.netlify.app/admin",
 	resume: "",
 };
