@@ -73,7 +73,7 @@ import {
 								<li>
 									<div class="flex items-center">
 										<p class="w-full p-0 m-0">{certificate.title}</p>
-										<p class="p-0 m-0 ml-4 text-zinc-300 dark:text-zinc-400">
+										<p class="p-0 m-0 ml-4 text-zinc-400 dark:text-zinc-400">
 											{certificate.source}
 										</p>
 									</div>
@@ -81,7 +81,10 @@ import {
 										{certificate.description}
 									</p>
 									<a
-										href={certificate.link}
+										href={`/${certificate.title
+											.toLowerCase()
+											.split(" ")
+											.join("-")}`}
 										target="_blank"
 										class="p-0 m-0 text-sm underline hover:text-rose-800 dark:text-[#67d1b1] dark:hover:text-[#05ce91] text-rose-400"
 									>
@@ -107,24 +110,28 @@ import {
 					</ul>
 				</article>
 			</section>
-			<div class="flex items-center">
-				<div class="w-full flex flex-row">
-					<p class="p-0 m-0 mr-4">LINKS:</p>
-					<a
-						href={MY_SOCIAL_LINKS.resume}
-						target="_blank"
-						class="p-0 px-2 m-0 text-lg underline hover:text-rose-600 dark:hover:text-[#05ce91]"
-						>RESUME</a
-					>
-					<span>-----</span>
-					<a
-						href={MY_SOCIAL_LINKS.linkedin}
-						target="_blank"
-						class="p-0 px-2 m-0 text-lg underline hover:text-rose-600 dark:hover:text-[#05ce91]"
-						>LINKEDIN</a
-					>
-				</div>
-				<div><a href={MY_SOCIAL_LINKS.admin}>ADMIN</a></div>
+			<div class="flex flex-row items-center">
+				<p class="p-0 m-0 mr-4">LINKS:</p>
+				<a
+					href={MY_SOCIAL_LINKS.resume}
+					target="_blank"
+					class="p-0 px-2 m-0 text-lg underline hover:text-rose-600 dark:hover:text-[#05ce91]"
+					>RESUME</a
+				>
+				<span>-----</span>
+				<a
+					href={MY_SOCIAL_LINKS.linkedin}
+					target="_blank"
+					class="p-0 px-2 m-0 text-lg underline hover:text-rose-600 dark:hover:text-[#05ce91]"
+					>LINKEDIN</a
+				>
+				<span>-----</span>
+				<a
+					href={MY_SOCIAL_LINKS.admin}
+					target="_blank"
+					class="p-0 px-2 m-0 text-lg underline hover:text-rose-600 dark:hover:text-[#05ce91]"
+					>ADMIN</a
+				>
 			</div>
 		</main>
 		<Footer />

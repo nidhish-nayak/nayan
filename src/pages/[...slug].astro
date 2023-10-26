@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+import powerbi from "../assets/powerbi-dax.webp";
+import sql from "../assets/sql-intermediate.webp";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { ABOUT_ME, SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+
+export async function getStaticPaths() {
+	const certificates = ABOUT_ME.certifications;
+	return certificates.map((certificate) => ({
+		params: { slug: certificate.title.toLowerCase().split(" ").join("-") },
+		props: certificate,
+	}));
+}
+
+const { slug } = Astro.params;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main class="m-4 min-h-screen">
+			{
+				slug === "powerbi-dax" ? (
+					<Image
+						src={powerbi}
+						quality="high"
+						alt="certificate"
+						class="w-full md:w-1/2 mx-auto"
+					/>
+				) : (
+					<span />
+				)
+			}
+			{
+				slug === "sql-intermediate" ? (
+					<Image
+						src={sql}
+						quality="high"
+						alt="certificate"
+						class="w-full md:w-1/2 mx-auto"
+					/>
+				) : (
+					<span />
+				)
+			}
+		</main>
+		<Footer />
+	</body>
+</html>

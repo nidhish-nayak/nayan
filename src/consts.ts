@@ -84,9 +84,9 @@ export const MY_EXPERIENCE = [
 export const ABOUT_ME = {
 	title: "About Me",
 	descriptionOne:
-		"Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aenim quos at asperiores perferendis iusto, dolorum consectetur adipisci fugiat excepturi voluptates repellat culpa tenetur iste sit vero, doloremque quidem.",
+		"Hello there! I'm Nayan Malkhedkar. I have passion for both the arts and data-driven insights. I find joy in connecting with people and pursuing various hobbies.",
 	descriptionTwo:
-		"Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aenim quos at asperiores perferendis iusto, dolorum consectetur adipisci fugiat excepturi voluptates repellat culpa tenetur iste sit vero, doloremque quidem.",
+		" I explore latest technologies and dive deep into the world of data, I constantly seek to bring a personal touch to everything I do. Feel free to join me in exploring the beauty of data, one step at a time.",
 	skills: [
 		"PowerBI",
 		"Excel",
@@ -104,18 +104,18 @@ export const ABOUT_ME = {
 	hobbies: ["Singing", "Santoor", "Reading", "Cultural Events", "Debates"],
 	certifications: [
 		{
-			title: "DAX Certified",
-			description: "Analyzing and designing data constructs using DAX.",
-			id: "13FRC88op0",
-			source: "Linkedin",
-			link: "",
+			title: "PowerBI DAX",
+			description:
+				"Advanced Power BI: DAX Language, Formulas, and Calculations",
+			id: "dd3b839a80...",
+			source: "LinkedIn",
 		},
 		{
-			title: "Machine Learning",
-			description: "Certification by IRTQ for advanced ML&AI",
-			id: "sDSND132oeT",
-			source: "ITRReC",
-			link: "",
+			title: "SQL Intermediate",
+			description:
+				"MySQL database management system development and manipulation.",
+			id: "43A10FF8FAC4",
+			source: "HackerRank",
 		},
 	],
 };

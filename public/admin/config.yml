@@ -17,7 +17,12 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Publish Date", name: "pubDate", widget: "datetime" }
-      - { label: "Featured Image", name: "heroImage", widget: "image" }
+      - {
+          label: "Featured Image",
+          name: "heroImage",
+          widget: "image",
+          required:false,
+        }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Markdown Content", name: "body", widget: "markdown" }
   - name: "projects" # Used in routes, e.g., /admin/collections/blog

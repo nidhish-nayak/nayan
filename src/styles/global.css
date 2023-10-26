@@ -151,9 +151,9 @@ p {
 	margin-bottom: 1em;
 }
 
-article .prose pre {
+/* article .prose pre {
 	display: inline-block;
-}
+} */
 
 @media (max-width: 480px) {
 	article .prose pre {
@@ -167,6 +167,28 @@ article .prose pre {
 
 .prose p {
 	margin-bottom: 2em;
+}
+
+article .prose a::before {
+	display: none;
+	margin: 0;
+	width: fit-content;
+}
+
+article .prose p {
+	margin: 0;
+}
+
+article .prose a p {
+	margin: 0;
+	width: fit-content;
+	padding: 0;
+}
+
+article .prose a {
+	margin: 0;
+	margin-top: 0.5em;
+	padding: 0;
 }
 
 textarea {

@@ -30,7 +30,7 @@ const posts = (await getCollection("blog"))
 	</head>
 	<body>
 		<Header />
-		<main class="p-4">
+		<main class="p-4 max-w-screen-2xl min-h-screen">
 			<section>
 				<div class="flex items-center justify-between mt-2 mb-16">
 					<h2 class="p-0 m-0 dark:p-0 dark:m-0">Blogs</h2>
@@ -43,7 +43,7 @@ const posts = (await getCollection("blog"))
 					</span>
 				</div>
 				<ul
-					class="flex flex-wrap items-center justify-center gap-8 xl:justify-between"
+					class="flex flex-wrap items-start justify-center gap-8 xl:justify-start"
 				>
 					{
 						posts.map((post) => (
@@ -60,7 +60,7 @@ const posts = (await getCollection("blog"))
 											class="w-full h-full max-w-none sm:w-[400px] sm:h-[260px] object-cover hover:scale-125 transition-all rounded-none"
 										/>
 									</div>
-									<h4 class="title">{post.data.title}</h4>
+									<h4 class="title max-w-[400px]">{post.data.title}</h4>
 									<p class="text-base sm:text-lg date text-zinc-600 dark:text-zinc-400">
 										<FormattedDate date={post.data.pubDate} />
 									</p>

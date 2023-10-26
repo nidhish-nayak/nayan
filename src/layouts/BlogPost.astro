@@ -41,7 +41,7 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
 				line-height: 1;
 			}
 			.title h1 {
-				margin: 0 0 0 0;
+				margin: 0 0 0.25em 0;
 			}
 			.title ul {
 				display: flex;
@@ -64,6 +64,8 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
 			}
 			p {
 				margin: 0;
+				margin-top: 0.5em;
+				margin-bottom: 0.5em;
 			}
 			a {
 				text-decoration: none;
@@ -73,7 +75,7 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
 
 	<body>
 		<Header />
-		<main>
+		<main class="min-h-screen max-w-screen-2xl">
 			<article>
 				<div class="hero-image">
 					{
@@ -103,9 +105,12 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
 							}
 						</div>
 						<h1 class="text-3xl sm:text-5xl md:text-inherit">{title}</h1>
+						<p class="text-base sm:text-xl dark:text-zinc-400 md:text-inherit">
+							{description}
+						</p>
 						<ul class="p-0 list-none">
 							{
-								tags?.map((tag) => (
+								tags?.map((tag: any) => (
 									<li class="text-sm sm:text-lg bg-rose-600 dark:bg-[#05ce91] dark:hover:bg-[#1e7e61] hover:bg-rose-800">
 										<a
 											class="px-2 text-white rounded-full"

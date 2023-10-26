@@ -46,7 +46,10 @@ const { title, description, pubDate, updatedDate, image, tools, github } =
 				line-height: 1;
 			}
 			.title h1 {
-				margin: 0 0 0 0;
+				margin: 0 0 0.25em 0;
+			}
+			.title p {
+				margin: 0 0 0.5em 0;
 			}
 			.title ul {
 				display: flex;
@@ -67,6 +70,8 @@ const { title, description, pubDate, updatedDate, image, tools, github } =
 			}
 			p {
 				margin: 0;
+				margin-top: 0.5em;
+				margin-bottom: 2em;
 			}
 			a {
 				text-decoration: none;
@@ -76,7 +81,7 @@ const { title, description, pubDate, updatedDate, image, tools, github } =
 
 	<body>
 		<Header />
-		<main>
+		<main class="min-h-screen max-w-screen-2xl">
 			<article>
 				<div class="hero-image">
 					{
@@ -106,9 +111,12 @@ const { title, description, pubDate, updatedDate, image, tools, github } =
 							}
 						</div>
 						<h1 class="text-3xl sm:text-5xl md:text-inherit">{title}</h1>
+						<p class="text-base sm:text-xl dark:text-zinc-400 md:text-inherit">
+							{description}
+						</p>
 						<ul class="p-0 list-none">
 							{
-								tools?.map((tool) => (
+								tools?.map((tool: any) => (
 									<li class="p-0 px-3 py-1 m-0 text-sm text-black rounded-full dark:bg-zinc-800 dark:text-white sm:text-lg bg-zinc-300">
 										{tool}
 									</li>

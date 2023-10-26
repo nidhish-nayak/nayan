@@ -45,7 +45,7 @@ const tagCount = getTagCount();
 	</head>
 	<body>
 		<Header />
-		<main class="min-h-screen p-4">
+		<main class="min-h-screen max-w-screen-2xl p-4">
 			<h2 class="p-0 m-0 mt-2 mb-8 dark:m-0 dark:mt-2 dark:mb-8">All Tags</h2>
 			<section class="flex flex-wrap gap-4">
 				{
@@ -53,10 +53,10 @@ const tagCount = getTagCount();
 					tags.map((tag) => (
 						<p class="my-2 text-xl">
 							<a class="rounded-md group" href={`/tags/${tag}`}>
-								<span class="px-4 py-2 text-black rounded-tl-full rounded-bl-full bg-zinc-300 group-hover:bg-zinc-400 bg-inherit">
+								<span class="px-4 py-2 text-black rounded-tl-full rounded-bl-full dark:bg-zinc-700 dark:group-hover:bg-zinc-800 dark:text-white bg-zinc-300 group-hover:bg-zinc-400 bg-inherit">
 									{tag}
 								</span>
-								<span class="px-4 py-2 text-white rounded-tr-full rounded-br-full bg-rose-600 group-hover:bg-rose-700">
+								<span class="px-4 py-2 text-white rounded-tr-full rounded-br-full bg-rose-600 dark:bg-[#05ce91] dark:group-hover:bg-[#21af85] group-hover:bg-rose-700">
 									{tagCount[tag]}
 								</span>
 							</a>
