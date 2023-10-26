@@ -134,14 +134,6 @@ article .prose img {
 	width: 75%;
 }
 
-article .prose li {
-	color: black;
-}
-
-:global(.dark) article .prose li {
-	color: white;
-}
-
 strong,
 b {
 	font-weight: 700;
