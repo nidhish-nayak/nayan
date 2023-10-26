@@ -1,9 +1,11 @@
 ---
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import BaseHead from "../../components/BaseHead.astro";
 import Footer from "../../components/Footer.astro";
-import FormattedDate from "../../components/FormattedDate.astro";
 import Header from "../../components/Header.astro";
+import SideRibbon from "../../components/SideRibbon.astro";
+import "../../components/hero/Projects.scss";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
 
 const projects = (await getCollection("projects")).sort(
@@ -17,31 +19,172 @@ const projects = (await getCollection("projects")).sort(
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<Header />
-		<main>
-			<section>
-				<ul>
+		<Header title={SITE_TITLE} />
+		<SideRibbon />
+		<main class="p-4">
+			<h2 class="mb-16 m-0 p-0 dark:m-0 dark:p-0">All Works</h2>
+			<section
+				class="w-full md:w-[97%] border-t pt-4 border-zinc-300 dark:border-zinc-700"
+			>
+				<div class="flex flex-col gap-16 mb-16 md:mb-24 md:gap-32">
 					{
-						projects.map((project) => (
-							<li>
-								<a href={`/blog/${project.slug}/`}>
-									<img
-										width={720}
-										height={360}
-										src={project.data.image}
-										alt="blogImage"
-										loading="lazy"
-										decoding="async"
-									/>
-									<h4 class="title">{project.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={project.data.pubDate} />
-									</p>
-								</a>
-							</li>
-						))
+						projects.map((project, index) =>
+							index % 2 === 0 ? (
+								<div class="flex flex-wrap md:grid md:grid-cols-[400px_1fr] gap-[2em]">
+									<a
+										href={`/projects/${project.slug}`}
+										class="before:hidden"
+										rel="prefetch-intent"
+									>
+										<div class="w-full sm:w-[400px] sm:h-[400px] justify-self-start float-right overflow-hidden">
+											<Image
+												src={project.data.image}
+												width={400}
+												height={400}
+												alt="project-image"
+												class="object-center w-full h-full sm:w-[400px] sm:h-[400px] rounded-none hover:scale-125 transition-all"
+											/>
+										</div>
+									</a>
+									<article class="self-start xl:w-[70%] flex flex-col justify-between h-full">
+										<div class="flex flex-col gap-4 justify-evenly">
+											<h2 class="flex gap-4 p-0 m-0">
+												<a
+													href={`/projects/${project.slug}`}
+													rel="prefetch-intent"
+													class="p-0 m-0 before:bg-rose-600 dark:before:bg-[#05ce91]"
+												>
+													{project.data.title}
+												</a>
+												<p class="self-start text-lg text-zinc-300 dark:text-zinc-500">
+													/0{index + 1}
+												</p>
+											</h2>
+											<p class="p-0 m-0">{project.data.description}</p>
+											<ul class="flex flex-wrap gap-4 mt-4">
+												{project.data.tools.map((tool: string) => (
+													<li class="bg-zinc-200 dark:bg-zinc-900 py-[2px] px-3 rounded-md text-lg">
+														{tool}
+													</li>
+												))}
+											</ul>
+										</div>
+										<div class="flex gap-8 mt-6 md:mt-0">
+											<a
+												href={project.data.github}
+												target="_blank"
+												class="dark:before:bg-white"
+											>
+												Github &#8599;{" "}
+											</a>
+											<a
+												href={`/projects/${project.slug}`}
+												rel="prefetch-intent"
+												class="underline decoration-rose-600 dark:before:bg-white dark:decoration-[#05ce91] underline-offset-[10px]"
+											>
+												Read More
+											</a>
+										</div>
+									</article>
+								</div>
+							) : (
+								<div class="flex flex-wrap md:grid md:grid-cols-[1fr_400px] gap-[2em]">
+									<article class="flex-col items-end justify-between hidden h-full md:flex">
+										<div class="flex flex-col xl:w-[70%] justify-evenly items-end text-right gap-4">
+											<h2 class="flex gap-4 p-0 m-0">
+												<p class="self-start text-lg text-zinc-300 dark:text-zinc-500">
+													/0{index + 1}
+												</p>
+												<a
+													href={`/projects/${project.slug}`}
+													rel="prefetch-intent"
+													class="before:bg-rose-600 dark:before:bg-[#05ce91]"
+												>
+													{project.data.title}
+												</a>
+											</h2>
+											<p class="p-0 m-0">{project.data.description}</p>
+											<ul class="flex flex-wrap gap-4 mt-4">
+												{project.data.tools.map((tool: string) => (
+													<li class="bg-zinc-200 dark:bg-zinc-900 py-[2px] px-3 rounded-md text-lg">
+														{tool}
+													</li>
+												))}
+											</ul>
+										</div>
+										<div class="flex gap-8">
+											<a
+												href={project.data.github}
+												target="_blank"
+												class="dark:before:bg-white"
+											>
+												Github &#8599;{" "}
+											</a>
+											<a
+												href={`/projects/${project.slug}`}
+												rel="prefetch-intent"
+												class="underline decoration-rose-600 dark:before:bg-white dark:decoration-[#05ce91] underline-offset-[10px]"
+											>
+												Read More
+											</a>
+										</div>
+									</article>
+									<a href={`/projects/${project.slug}`} class="before:hidden">
+										<div class="w-full sm:w-[400px] sm:h-[400px]  justify-self-start float-left overflow-hidden">
+											<Image
+												src={project.data.image}
+												width={400}
+												height={400}
+												alt="project-image"
+												class="object-center w-full h-full sm:w-[400px] sm:h-[400px] rounded-none hover:scale-125 transition-all"
+											/>
+										</div>
+									</a>
+									<article class="flex flex-col items-start justify-between h-full md:hidden">
+										<div class="flex flex-col xl:w-[70%] justify-evenly items-start text-left gap-4">
+											<h2 class="flex flex-row xl:w-[70%] justify-evenly items-end text-right gap-4">
+												<a
+													href={`/projects/${project.slug}`}
+													rel="prefetch-intent"
+													class="before:bg-rose-600"
+												>
+													{project.data.title}
+												</a>
+												<p class="self-start text-lg text-zinc-300 dark:text-zinc-500">
+													/0{index + 1}
+												</p>
+											</h2>
+											<p class="p-0 m-0">{project.data.description}</p>
+											<ul class="flex flex-wrap gap-4 mt-4">
+												{project.data.tools.map((tool: string) => (
+													<li class="bg-zinc-200 dark:bg-zinc-900 py-[2px] px-3 rounded-md text-lg">
+														{tool}
+													</li>
+												))}
+											</ul>
+										</div>
+										<div class="flex gap-8 mt-6 md:mt-0">
+											<a
+												href={project.data.github}
+												target="_blank"
+												class="dark:before:bg-white"
+											>
+												Github &#8599;{" "}
+											</a>
+											<a
+												href={`/projects/${project.slug}`}
+												rel="prefetch-intent"
+												class="underline decoration-rose-600 underline-offset-[10px]"
+											>
+												Read More
+											</a>
+										</div>
+									</article>
+								</div>
+							)
+						)
 					}
-				</ul>
+				</div>
 			</section>
 		</main>
 		<Footer />
