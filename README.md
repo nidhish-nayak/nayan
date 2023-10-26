@@ -16,46 +16,16 @@
 
 Our project is structured with an eye for clarity and organization:
 
-```markdown
-/
-public/
-admin/
-config.yml
-index.html
-fonts/
-favicon.svg
-social-image.png
-src/
-assets/
-images.png
-components/
-hero/
-heroComponents.tsx
-Header.astro
-Footer.astro
-Hamburger.astro
-Logo.astro
-layouts/
-ProjectLayout.astro
-BlogLayout.astro
-content/
-blog/
-post.md
-projects/
-post.md
-config.ts
-pages/
-posts/
-post1.md
-post2.md
-post3.md
-index.astro
-styles/
-global.css
-astro.config.mjs
-package.json
-tsconfig.json
-tailwind.config.mjs
+```
+├── public/             # Public assets and HTML template
+├── src/
+│   ├── assets/         # Assets used in the application
+│   ├── components/     # Reusable React components
+│   ├── pages/          # Top-level application pages
+│   ├── layouts/        # Layouts for pages
+|   ├── types/          # Custom and global types defined
+│   └── utils/          # Utility functions and constants
+└── ...
 ```
 
 - **public/**: Home to essential static files including `robots.txt`, `favicon.svg`, and the all-important `social-image.png`.
