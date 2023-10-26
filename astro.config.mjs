@@ -8,6 +8,6 @@ import preact from "@astrojs/preact";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://nayan-blog.vercel.app",
+	site: "https://nayan-m.vercel.app",
 	integrations: [mdx(), sitemap(), prefetch(), tailwind(), preact()],
 });
