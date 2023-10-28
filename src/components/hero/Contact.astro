@@ -38,8 +38,9 @@ import { MY_SOCIAL_LINKS } from "../../consts";
 							mySvg.classList.toggle("hidden");
 							myButton.innerHTML = "SENT";
 							myButton.classList.remove("bg-black");
+							myButton.classList.remove("dark:bg-zinc-300");
 							myButton.classList.add("bg-green-500");
-							// mySvg2.classList.toggle("hidden");
+							myButton.classList.add("dark:bg-green-500");
 						},
 						function (error) {
 							console.log("FAILED...", error);
@@ -47,7 +48,9 @@ import { MY_SOCIAL_LINKS } from "../../consts";
 							mySvg2.classList.toggle("hidden");
 							myButton.innerHTML = "FAILED";
 							myButton.classList.remove("bg-black");
+							myButton.classList.remove("dark:bg-zinc-300");
 							myButton.classList.add("bg-red-500");
+							myButton.classList.add("dark:bg-red-500");
 						}
 					);
 				});
