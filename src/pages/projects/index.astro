@@ -33,7 +33,7 @@ const projects = (await getCollection("projects")).sort(
 								<div class="flex flex-wrap md:grid md:grid-cols-[400px_1fr] gap-[2em]">
 									<a
 										href={`/projects/${project.slug}`}
-										class="before:hidden"
+										class="before:invisible"
 										rel="prefetch-intent"
 									>
 										<div class="w-full sm:w-[400px] sm:h-[400px] justify-self-start float-right overflow-hidden">
@@ -129,7 +129,10 @@ const projects = (await getCollection("projects")).sort(
 											</a>
 										</div>
 									</article>
-									<a href={`/projects/${project.slug}`} class="before:hidden">
+									<a
+										href={`/projects/${project.slug}`}
+										class="before:invisible"
+									>
 										<div class="w-full sm:w-[400px] sm:h-[400px]  justify-self-start float-left overflow-hidden">
 											<Image
 												src={project.data.image}
