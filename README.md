@@ -80,10 +80,6 @@ The project boasts a dazzling array of features:
 - [x] draft posts
 - [x] sitemap & rss feed
 
-## Lighthouse Score
-
-![Lighthouse-score](https://github.com/nidhish-nayak/nayan/assets/76598208/58502091-bac7-46a7-980f-8965ecad92d0)
-
 ## Seamless Integrations
 
 We've harmonized various tools and libraries to make your development experience a symphony of efficiency:
