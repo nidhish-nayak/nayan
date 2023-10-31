@@ -129,5 +129,6 @@ export const MY_SOCIAL_LINKS = {
 	email: "nayan.malkhedkar@gmail.com",
 	mobile: "91+ 8867831881",
 	admin: "https://nayan-m.netlify.app/admin",
-	resume: "",
+	resume:
+		"https://drive.google.com/file/d/1oTk2kDcKBC8mCX27Jj7fuaJAM-eGrbxw/view?usp=drive_link",
 };

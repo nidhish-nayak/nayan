@@ -12,7 +12,9 @@ const projectCount = projects.length;
 const topProjects = projects.filter((project, index) => index <= 7);
 ---
 
-<section class="w-full md:w-[97%] mt-16 sm:mt-24 border-t border-zinc-300 dark:border-zinc-700">
+<section
+	class="w-full md:w-[97%] mt-16 sm:mt-24 border-t border-zinc-300 dark:border-zinc-700"
+>
 	<p class="mb-8">My Works</p>
 	<div class="flex flex-col gap-16 mb-16 md:mb-24 md:gap-32">
 		{
@@ -21,7 +23,8 @@ const topProjects = projects.filter((project, index) => index <= 7);
 					<div class="flex flex-wrap md:grid md:grid-cols-[400px_1fr] gap-[2em]">
 						<a
 							href={`/projects/${project.slug}`}
-							class="before:hidden"
+							title={`${project.slug}`}
+							class="before:invisible relative"
 							rel="prefetch-intent"
 						>
 							<div class="w-full sm:w-[400px] sm:h-[400px] justify-self-start float-right overflow-hidden">
@@ -30,7 +33,7 @@ const topProjects = projects.filter((project, index) => index <= 7);
 									width={400}
 									height={400}
 									alt="project-image"
-									class="object-center w-full h-full sm:w-[400px] sm:h-[400px] rounded-none hover:scale-125 transition-all"
+									class="object-cover w-full h-full sm:w-[400px] sm:h-[400px] rounded-none hover:scale-125 transition-all"
 								/>
 							</div>
 						</a>
@@ -39,12 +42,13 @@ const topProjects = projects.filter((project, index) => index <= 7);
 								<h2 class="flex gap-4 p-0 m-0">
 									<a
 										href={`/projects/${project.slug}`}
+										title={`${project.slug}`}
 										rel="prefetch-intent"
 										class="p-0 m-0 before:bg-rose-600 dark:before:bg-[#05ce91]"
 									>
 										{project.data.title}
 									</a>
-									<p class="self-start text-lg text-zinc-300 dark:text-zinc-500">
+									<p class="self-start text-lg text-zinc-500 dark:text-zinc-500">
 										/0{index + 1}
 									</p>
 								</h2>
@@ -67,10 +71,14 @@ const topProjects = projects.filter((project, index) => index <= 7);
 								</a>
 								<a
 									href={`/projects/${project.slug}`}
+									title={`${project.slug}`}
 									rel="prefetch-intent"
 									class="underline decoration-rose-600 dark:before:bg-white dark:decoration-[#05ce91] underline-offset-[10px]"
 								>
-									Read More
+									More Details
+									<span class="hidden">
+										on {project.slug.toLowerCase().split("-").join(" ")}
+									</span>
 								</a>
 							</div>
 						</article>
@@ -80,11 +88,12 @@ const topProjects = projects.filter((project, index) => index <= 7);
 						<article class="flex-col items-end justify-between hidden h-full md:flex">
 							<div class="flex flex-col xl:w-[70%] justify-evenly items-end text-right gap-4">
 								<h2 class="flex gap-4 p-0 m-0">
-									<p class="self-start text-lg text-zinc-300 dark:text-zinc-500">
+									<p class="self-start text-lg text-zinc-500 dark:text-zinc-500">
 										/0{index + 1}
 									</p>
 									<a
 										href={`/projects/${project.slug}`}
+										title={`${project.slug}`}
 										rel="prefetch-intent"
 										class="before:bg-rose-600 dark:before:bg-[#05ce91]"
 									>
@@ -111,20 +120,27 @@ const topProjects = projects.filter((project, index) => index <= 7);
 								<a
 									href={`/projects/${project.slug}`}
 									rel="prefetch-intent"
+									title={`${project.slug}`}
 									class="underline decoration-rose-600 dark:before:bg-white dark:decoration-[#05ce91] underline-offset-[10px]"
 								>
-									Read More
+									More Details
+									<span class="hidden">
+										on {project.slug.toLowerCase().split("-").join(" ")}
+									</span>
 								</a>
 							</div>
 						</article>
-						<a href={`/projects/${project.slug}`} class="before:hidden">
+						<a
+							href={`/projects/${project.slug}`}
+							class="relative before:invisible"
+						>
 							<div class="w-full sm:w-[400px] sm:h-[400px]  justify-self-start float-left overflow-hidden">
 								<Image
 									src={project.data.image}
 									width={400}
 									height={400}
 									alt="project-image"
-									class="object-center w-full h-full sm:w-[400px] sm:h-[400px] rounded-none hover:scale-125 transition-all"
+									class="object-cover w-full h-full sm:w-[400px] sm:h-[400px] rounded-none hover:scale-125 transition-all"
 								/>
 							</div>
 						</a>
@@ -135,6 +151,7 @@ const topProjects = projects.filter((project, index) => index <= 7);
 										href={`/projects/${project.slug}`}
 										rel="prefetch-intent"
 										class="before:bg-rose-600"
+										title={`${project.slug}`}
 									>
 										{project.data.title}
 									</a>
@@ -163,8 +180,12 @@ const topProjects = projects.filter((project, index) => index <= 7);
 									href={`/projects/${project.slug}`}
 									rel="prefetch-intent"
 									class="underline decoration-rose-600 underline-offset-[10px]"
+									title={`${project.slug}`}
 								>
-									Read More
+									More Details
+									<span class="hidden">
+										on {project.slug.toLowerCase().split("-").join(" ")}
+									</span>
 								</a>
 							</div>
 						</article>
