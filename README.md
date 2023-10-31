@@ -71,6 +71,7 @@ The project boasts a dazzling array of features:
 - **Server-Side Rendering (SSR)**: Harness the speed and efficiency of SSR, providing an exceptional user experience.
 - **Image Optimization**: Say goodbye to lag with Sharp's image optimization, enhancing performance and visual appeal.
   <br>
+  <br>
 - [x] type-safe markdown
 - [x] super fast performance
 - [x] responsive (mobile ~ desktops)
