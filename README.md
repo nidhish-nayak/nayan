@@ -20,7 +20,7 @@ Welcome to the Nayan's Portfolio! This README provides an in-depth exploration o
 
 This project is a fusion of portfolio and blog functionalities, complete with an intuitive admin page driven by Netlify CMS. Our project is meticulously fine-tuned for performance, leveraging server-side rendering (SSR) and cutting-edge image optimization through Sharp.
 
-### Image here:
+![preview](https://github.com/nidhish-nayak/nayan/assets/76598208/d4722638-4a1c-4d3a-8adb-e58556727207)
 
 <p align="left">
   
@@ -81,9 +81,7 @@ The project boasts a dazzling array of features:
 
 ## Lighthouse Score
 
-<p align="center">
-    <img width="710" alt="AstroPaper Lighthouse Score" src="AstroPaper-lighthouse-score.svg">
-</p>
+![Lighthouse-score](https://github.com/nidhish-nayak/nayan/assets/76598208/58502091-bac7-46a7-980f-8965ecad92d0)
 
 ## Seamless Integrations
 
