@@ -1,10 +1,17 @@
 ---
 title: Data Analytics
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores, deleniti obcaecati animi hic officiis? Laudantiummagni iusto quo ratione asperiores!
-pubDate: "2023-10-23T17:46:34+05:30"
-image: /project-01.webp
-tools: ["PowerBI", "Python", "Numpy", "MySQL"]
-github: "https://github.com/nayan-malkhedkar"
+description: >-
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores,
+  deleniti obcaecati animi hic officiis? Laudantiummagni iusto quo ratione
+  asperiores!
+pubDate: '2023-10-23T17:46:34+05:30'
+image: /project-01.jpg
+tools:
+  - PowerBI
+  - Python
+  - Numpy
+  - MySQL
+github: 'https://github.com/nayan-malkhedkar'
 ---
 
 # This is title of the markdown.
