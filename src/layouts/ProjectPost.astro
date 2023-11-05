@@ -123,6 +123,24 @@ const { title, description, pubDate, updatedDate, image, tools, github } =
 								))
 							}
 						</ul>
+						<div
+							class="flex items-center justify-center gap-4 mt-4 mb-8 sm:mb-0"
+						>
+							<a
+								href={github}
+								style="padding:8px"
+								target="_blank"
+								class="text-base border border-black border-dashed dark:border-white dark:hover:bg-[#05ce91] hover:bg-rose-600 hover:text-white"
+								>Github Link</a
+							>
+							<a
+								href="javascript:history.back()"
+								style="padding:8px"
+								class="text-base border border-black border-dashed dark:border-white dark:hover:bg-[#05ce91] hover:bg-rose-600 hover:text-white"
+							>
+								&larr; Back</a
+							>
+						</div>
 						<hr class="m-0 sm:my-12" />
 					</div>
 					<slot />
