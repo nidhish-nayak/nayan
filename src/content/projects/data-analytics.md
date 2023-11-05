@@ -32,9 +32,9 @@ Power BI sales supermarket dashboard for the Myanmar region is an essential tool
 
 ![product](/t2.1.png)
 
-**Sales by Location: **Gain insights into the demographics of your customers  location. This information can be used to tailor marketing campaigns and product offerings.
+**Sales by Location:** Gain insights into the demographics of your customers  location. This information can be used to tailor marketing campaigns and product offerings.
 
-**Geospatial Visualization: **Visualize sales and customer distribution on a map, helping you identify prime locations for potential expansion or marketing campaigns.
+**Geospatial Visualization:** Visualize sales and customer distribution on a map, helping you identify prime locations for potential expansion or marketing campaigns.
 
 ![map](/t3.png)
 
