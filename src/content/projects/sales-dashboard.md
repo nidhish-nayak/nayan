@@ -1,10 +1,10 @@
 ---
 title: Sales Dashboard
-description: >-
+description:
   A Sales Data Dashboard for a business operating in Myanmar serves as a crucial
   tool for monitoring and analyzing various sales-related metrics and key
   performance indicators (KPIs) within the Myanmar market.
-pubDate: '2023-10-23T17:46:34+05:30'
+pubDate: "2023-10-23T17:46:34+05:30"
 image: /pr.webp
 tools:
   - Excel
@@ -12,8 +12,9 @@ tools:
   - Data Cleaning
   - Data Analysis
   - Dashboard
-github: 'https://github.com/nayan-malkhedkar/all-projects/tree/main/Sales%20Dashboard'
+github: "https://github.com/nayan-malkhedkar/all-projects/tree/main/Sales%20Dashboard"
 ---
+
 # Super Market Sales Dashboard
 
 A Sales Data Dashboard for a business operating in Myanmar serves as a crucial tool for monitoring and analyzing various sales-related metrics and key performance indicators (KPIs) within the Myanmar market.
@@ -32,13 +33,11 @@ Power BI sales supermarket dashboard for the Myanmar region is an essential tool
 
 ![product](/t2.1.png)
 
-**Sales by Location:** Gain insights into the demographics of your customers  location. This information can be used to tailor marketing campaigns and product offerings.
+**Sales by Location:** Gain insights into the demographics of your customers location. This information can be used to tailor marketing campaigns and product offerings.
 
 **Geospatial Visualization:** Visualize sales and customer distribution on a map, helping you identify prime locations for potential expansion or marketing campaigns.
 
 ![map](/t3.png)
-
-
 
 **Profitability Analysis:** Understand the profitability of different product lines and categories, allowing you to focus on high-margin items.
 

@@ -127,7 +127,23 @@ h5 {
 }
 
 table {
-	max-width: min-content;
+	max-width: max-content;
+}
+
+article .prose table tbody tr td {
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #cecece;
+}
+
+article .prose table thead tr th {
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #cecece;
+}
+
+.dark article .prose table {
+	color: white;
 }
 
 article .prose img {
@@ -177,6 +193,12 @@ article .prose a::before {
 
 article .prose p {
 	margin: 0;
+}
+
+article .prose p img {
+	width: fit-content;
+	max-width: 90%;
+	border-radius: 8px;
 }
 
 article .prose a p {
