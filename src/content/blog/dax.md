@@ -146,3 +146,11 @@ DATESINPERIOD(<dates>, <start date>, <number of intervals>, <interval>)
 `<number_of_intervals>`: This is the number of intervals you want to include in the table.
 
 `<interval>`: This is the type of interval you want to use, such as "day," "month," "quarter," or "year."
+
+Example Syntax :
+
+```
+Last30Days = DATESINPERIOD('YourTable'[Date], TODAY(), -30, DAY)
+```
+
+In conclusion, this blog post provides an introduction to Data Analysis Expressions (DAX), a powerful programming language used in Power BI for creating measures, calculated columns, and custom tables. DAX encompasses various categories of functions, including mathematical, statistical, text, logical, informational, and time intelligence functions. The focus of this post is on essential time intelligence functions, such as TOTALMTD, TOTALQTD, TOTALYTD, SAMEPERIODLASTYEAR, and DATESINPERIOD.
