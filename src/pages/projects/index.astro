@@ -21,12 +21,12 @@ const projects = (await getCollection("projects")).sort(
 	<body>
 		<Header title={SITE_TITLE} />
 		<SideRibbon />
-		<main class="p-4 max-w-screen-2xl">
-			<h2 class="mb-16 m-0 p-0 dark:m-0 dark:p-0">All Works</h2>
+		<main class="p-4 mt-8 max-w-screen-2xl">
+			<h2 class="mb-16 m-0 p-0 dark:m-0 dark:p-0 text-xl">All Works</h2>
 			<section
 				class="w-full md:w-[97%] border-t pt-4 border-zinc-300 dark:border-zinc-700"
 			>
-				<div class="flex flex-col gap-16 mb-16 md:mb-24 md:gap-32">
+				<div class="flex flex-col gap-24 mb-16 md:mb-24 md:gap-40">
 					{
 						projects.map((project, index) =>
 							index % 2 === 0 ? (
@@ -42,7 +42,7 @@ const projects = (await getCollection("projects")).sort(
 												width={400}
 												height={400}
 												alt="project-image"
-												class="object-center w-full h-full sm:w-[400px] sm:h-[400px] rounded-none hover:scale-125 transition-all"
+												class="object-cover w-full h-full sm:w-[400px] sm:h-[400px] rounded-none hover:scale-125 transition-all"
 											/>
 										</div>
 									</a>
@@ -73,14 +73,14 @@ const projects = (await getCollection("projects")).sort(
 											<a
 												href={project.data.github}
 												target="_blank"
-												class="dark:before:bg-white"
+												class="dark:before:bg-white border border-dashed py-[2px] px-3 transition-all dark:border-zinc-700"
 											>
 												Github &#8599;{" "}
 											</a>
 											<a
 												href={`/projects/${project.slug}`}
 												rel="prefetch-intent"
-												class="underline decoration-rose-600 dark:before:bg-white dark:decoration-[#05ce91] underline-offset-[10px]"
+												class="underline decoration-rose-600 dark:before:bg-white dark:decoration-[#05ce91] underline-offset-[16px]"
 											>
 												Read More
 											</a>
@@ -116,14 +116,14 @@ const projects = (await getCollection("projects")).sort(
 											<a
 												href={project.data.github}
 												target="_blank"
-												class="dark:before:bg-white"
+												class="dark:before:bg-white border border-dashed py-[2px] px-3 transition-all dark:border-zinc-700"
 											>
 												Github &#8599;{" "}
 											</a>
 											<a
 												href={`/projects/${project.slug}`}
 												rel="prefetch-intent"
-												class="underline decoration-rose-600 dark:before:bg-white dark:decoration-[#05ce91] underline-offset-[10px]"
+												class="underline decoration-rose-600 dark:before:bg-white dark:decoration-[#05ce91] underline-offset-[16px]"
 											>
 												Read More
 											</a>
@@ -139,7 +139,7 @@ const projects = (await getCollection("projects")).sort(
 												width={400}
 												height={400}
 												alt="project-image"
-												class="object-center w-full h-full sm:w-[400px] sm:h-[400px] rounded-none hover:scale-125 transition-all"
+												class="object-cover w-full h-full sm:w-[400px] sm:h-[400px] rounded-none hover:scale-125 transition-all"
 											/>
 										</div>
 									</a>
@@ -170,14 +170,14 @@ const projects = (await getCollection("projects")).sort(
 											<a
 												href={project.data.github}
 												target="_blank"
-												class="dark:before:bg-white"
+												class="dark:before:bg-white border border-dashed py-[2px] px-3 transition-all dark:border-zinc-700"
 											>
 												Github &#8599;{" "}
 											</a>
 											<a
 												href={`/projects/${project.slug}`}
 												rel="prefetch-intent"
-												class="underline decoration-rose-600 underline-offset-[10px]"
+												class="underline decoration-rose-600 underline-offset-[16px]"
 											>
 												Read More
 											</a>

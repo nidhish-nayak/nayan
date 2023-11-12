@@ -23,33 +23,32 @@ const posts = (await getCollection("blog"))
 
 			h4 {
 				padding: 0;
-				margin-top: 1rem;
-				margin-bottom: 0;
+				margin: 0;
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
-		<main class="p-4 max-w-screen-2xl min-h-screen">
+		<main class="p-4 mt-8 max-w-screen-2xl min-h-screen">
 			<section>
-				<div class="flex items-center justify-between mt-2 mb-16">
-					<h2 class="p-0 m-0 dark:p-0 dark:m-0">Blogs</h2>
-					<span>
+				<div class="flex items-center justify-between mt-2">
+					<h2 class="m-0 p-0 dark:m-0 dark:p-0 text-2xl">My Blogs</h2>
+					<span class="my-2">
 						<a
 							href="/tags"
-							class="p-2 text-lg rounded bg-zinc-300 dark:bg-zinc-800 dark:hover:bg-[#05ce91] hover:bg-rose-600 hover:text-white"
+							class="p-2 text-lg rounded transition-all bg-zinc-100 dark:bg-zinc-800 dark:hover:bg-[#05ce91] hover:bg-rose-600 hover:text-white"
 							>All Tags</a
 						>
 					</span>
 				</div>
 				<ul
-					class="flex flex-wrap items-start justify-center gap-8 xl:justify-start"
+					class="flex flex-wrap border-t pt-[16px] items-start justify-center gap-8 xl:justify-start"
 				>
 					{
 						posts.map((post) => (
 							<li>
 								<a href={`/blog/${post.slug}/`}>
-									<div class="w-full h-full sm:w-[400px] sm:h-[260px] object-cover overflow-hidden rounded">
+									<div class="w-full h-full sm:w-[400px] sm:h-[260px] object-cover overflow-hidden rounded-sm">
 										<img
 											width={400}
 											height={260}
@@ -60,9 +59,14 @@ const posts = (await getCollection("blog"))
 											class="w-full h-full max-w-none sm:w-[400px] sm:h-[260px] object-cover hover:scale-125 transition-all rounded-none"
 										/>
 									</div>
-									<h4 class="title max-w-[400px]">{post.data.title}</h4>
-									<p class="text-base sm:text-lg date text-zinc-600 dark:text-zinc-400">
-										<FormattedDate date={post.data.pubDate} />
+									<div class="flex justify-between items-center mt-6 max-w-[400px]">
+										<h4 class="max-w-[300px]">{post.data.title}</h4>
+										<p class="text-base date text-zinc-600 dark:text-zinc-400">
+											<FormattedDate date={post.data.pubDate} />
+										</p>
+									</div>
+									<p class="text-base max-w-[400px] sm:text-lg date text-zinc-600 dark:text-zinc-400">
+										{post.data.description}
 									</p>
 								</a>
 							</li>
