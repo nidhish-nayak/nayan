@@ -16,7 +16,7 @@ const topProjects = projects.filter((project, index) => index <= 7);
 	class="w-full md:w-[97%] mt-16 sm:mt-24 border-t border-zinc-300 dark:border-zinc-700"
 >
 	<p class="mb-8">My Works</p>
-	<div class="flex flex-col gap-16 mb-16 md:mb-24 md:gap-32">
+	<div class="flex flex-col gap-24 mb-16 md:mb-24 md:gap-40">
 		{
 			topProjects.map((project, index) =>
 				index % 2 === 0 ? (
@@ -65,7 +65,7 @@ const topProjects = projects.filter((project, index) => index <= 7);
 								<a
 									href={project.data.github}
 									target="_blank"
-									class="dark:before:bg-white"
+									class="dark:before:bg-white border border-dashed py-[2px] px-3 transition-all dark:border-zinc-700"
 								>
 									Github &#8599;{" "}
 								</a>
@@ -73,7 +73,7 @@ const topProjects = projects.filter((project, index) => index <= 7);
 									href={`/projects/${project.slug}`}
 									title={`${project.slug}`}
 									rel="prefetch-intent"
-									class="underline decoration-rose-600 dark:before:bg-white dark:decoration-[#05ce91] underline-offset-[10px]"
+									class="underline py-[2px] decoration-rose-600 dark:before:bg-white dark:decoration-[#05ce91] underline-offset-[14px]"
 								>
 									More Details
 									<span class="hidden">
@@ -113,7 +113,7 @@ const topProjects = projects.filter((project, index) => index <= 7);
 								<a
 									href={project.data.github}
 									target="_blank"
-									class="dark:before:bg-white"
+									class="dark:before:bg-white border border-dashed py-[2px] px-3 transition-all dark:border-zinc-700"
 								>
 									Github &#8599;{" "}
 								</a>
@@ -121,7 +121,7 @@ const topProjects = projects.filter((project, index) => index <= 7);
 									href={`/projects/${project.slug}`}
 									rel="prefetch-intent"
 									title={`${project.slug}`}
-									class="underline decoration-rose-600 dark:before:bg-white dark:decoration-[#05ce91] underline-offset-[10px]"
+									class="underline decoration-rose-600 dark:before:bg-white dark:decoration-[#05ce91] underline-offset-[16px]"
 								>
 									More Details
 									<span class="hidden">
@@ -172,14 +172,14 @@ const topProjects = projects.filter((project, index) => index <= 7);
 								<a
 									href={project.data.github}
 									target="_blank"
-									class="dark:before:bg-white"
+									class="dark:before:bg-white border border-dashed py-[2px] px-3 transition-all dark:border-zinc-700"
 								>
 									Github &#8599;{" "}
 								</a>
 								<a
 									href={`/projects/${project.slug}`}
 									rel="prefetch-intent"
-									class="underline decoration-rose-600 dark:decoration-[#05ce91] underline-offset-[10px]"
+									class="underline decoration-rose-600 dark:decoration-[#05ce91] underline-offset-[16px]"
 									title={`${project.slug}`}
 								>
 									More Details
