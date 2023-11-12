@@ -2,7 +2,7 @@
 title: "Power BI Uses"
 description: "Importance of business intelligence and data visualization."
 pubDate: "Oct 28, 2023"
-heroImage: "/power-bi.jpg"
+heroImage: "/power-bi.webp"
 tags: ["guide", "PowerBI", "Data Analytics"]
 ---
 

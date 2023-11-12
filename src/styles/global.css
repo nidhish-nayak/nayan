@@ -101,7 +101,7 @@ h6 {
 .dark h4,
 .dark h5,
 .dark h6 {
-	margin: 1em 0 0.5em 0;
+	margin: 1.5em 0 0.25em 0;
 	color: white;
 	line-height: 1.2;
 }
@@ -150,6 +150,29 @@ article .prose img {
 	width: 75%;
 }
 
+code {
+	background-color: #ececec;
+	padding: 8px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-radius: 4px;
+	margin-right: 2px;
+	margin-left: 2px;
+}
+
+.prose code {
+	font-weight: 300;
+}
+
+.dark code {
+	background-color: #24292e;
+}
+
+code::after,
+code::before {
+	display: none;
+}
+
 strong,
 b {
 	font-weight: 700;
@@ -166,10 +189,6 @@ a {
 p {
 	margin-bottom: 1em;
 }
-
-/* article .prose pre {
-	display: inline-block;
-} */
 
 @media (max-width: 480px) {
 	article .prose pre {

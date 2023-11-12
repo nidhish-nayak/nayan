@@ -52,8 +52,8 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
 				margin: 0.5em 0 1em 0;
 			}
 			.title li {
-				padding: 0.25em 0.5em;
-				border-radius: 15px;
+				padding: 4px 10px;
+				border-radius: 8px;
 			}
 			.date {
 				margin-bottom: 0.5em;
@@ -111,7 +111,7 @@ const { title, description, pubDate, updatedDate, heroImage, tags } =
 						<ul class="p-0 list-none">
 							{
 								tags?.map((tag: any) => (
-									<li class="text-sm sm:text-lg bg-rose-600 dark:bg-[#05ce91] dark:hover:bg-[#1e7e61] hover:bg-rose-800">
+									<li class="text-sm sm:text-lg bg-rose-600 transition-all dark:bg-[#05ce91] dark:hover:bg-[#1e7e61] hover:bg-rose-800">
 										<a
 											class="px-2 text-white rounded-full"
 											href={`/tags/${tag}`}

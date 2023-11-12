@@ -33,7 +33,7 @@ const posts = (await getCollection("blog"))
 			<section>
 				<div class="flex items-center justify-between mt-2">
 					<h2 class="m-0 p-0 dark:m-0 dark:p-0 text-2xl">My Blogs</h2>
-					<span class="my-2">
+					<span class="my-4">
 						<a
 							href="/tags"
 							class="p-2 text-lg rounded transition-all bg-zinc-100 dark:bg-zinc-800 dark:hover:bg-[#05ce91] hover:bg-rose-600 hover:text-white"
@@ -42,7 +42,7 @@ const posts = (await getCollection("blog"))
 					</span>
 				</div>
 				<ul
-					class="flex flex-wrap border-t pt-[16px] items-start justify-center gap-8 xl:justify-start"
+					class="flex flex-wrap border-t pt-[16px] items-start justify-center gap-8 xl:justify-center"
 				>
 					{
 						posts.map((post) => (
@@ -59,15 +59,17 @@ const posts = (await getCollection("blog"))
 											class="w-full h-full max-w-none sm:w-[400px] sm:h-[260px] object-cover hover:scale-125 transition-all rounded-none"
 										/>
 									</div>
-									<div class="flex justify-between items-center mt-6 max-w-[400px]">
-										<h4 class="max-w-[300px]">{post.data.title}</h4>
-										<p class="text-base date text-zinc-600 dark:text-zinc-400">
+									<div class="flex flex-col sm:flex-row justify-between items-center mt-6 md:max-w-[400px]">
+										<h4 class="text-center sm:text-left sm:max-w-[300px]">{post.data.title}</h4>
+										<p class="text-sm sm:text-base date min-w-[100px] text-center sm:text-right text-zinc-600 dark:text-zinc-400">
 											<FormattedDate date={post.data.pubDate} />
 										</p>
 									</div>
-									<p class="text-base max-w-[400px] sm:text-lg date text-zinc-600 dark:text-zinc-400">
+									<div class="sm:mt-0 mt-2">
+									<p class="text-base sm:text-left text-center max-w-[400px] sm:text-lg date text-zinc-600 dark:text-zinc-400">
 										{post.data.description}
 									</p>
+									</div>
 								</a>
 							</li>
 						))

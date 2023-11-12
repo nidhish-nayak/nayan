@@ -13,24 +13,27 @@ tags:
 # Introduction to DAX:
 
 DAX refers to Data Analysis Expression is a programming language used in Power BI to create Measures, Calculated Columns and custom tables. It is a combination of functions, constants, operators etc., that can be used in formulas and expressions to generate the required output values.
-
+<br>
+<br>
 There are several categories in the DAX Functions such as :
 
-1.Mathematical Functions
+1. Mathematical Functions
 
-2.Statistical Functions
+2. Statistical Functions
 
-3.Text Functions
+3. Text Functions
 
-4.Logical Functions
+4. Logical Functions
 
-5.Informational Functions
+5. Informational Functions
 
-6.Time Intelligence Functions and Others
+6. Time Intelligence Functions and Others
+
+<hr>
 
 In this blog we will be covering some of the important Time Intelligence Functions:
 
-## 1.TOTALMTD:
+## 1. TOTALMTD
 
 TOTALMTD function is a DAX expression that is used to calculate cumulative total over the specified to Month of the given data to last date.
 
@@ -46,7 +49,7 @@ TOTALMTD(<expression>,<dates>,[<filter>])
 
 - `<dates>`: This is the column containing the dates for which you want to calculate the cumulative total.
 
-- `[<filter>]` (optional): This is an optional argument that allows you to apply additional filters to the calculation.
+- **`[<filter>]`** (optional): This is an optional argument that allows you to apply additional filters to the calculation.
 
 Example Syntax :
 
@@ -54,7 +57,7 @@ Example Syntax :
 Total Revenue MTD = TOTALMTD(SUM(Sales[Revenue]), Sales[Date])
 ```
 
-## 2.TOTALQTD :
+## 2. TOTALQTD
 
 TOTALQTD function is a DAX expression that is used to calculate cumulative total over the specified to QUARTER of the given data to last date.
 
@@ -78,7 +81,7 @@ Example Syntax :
 Total Revenue QTD = TOTALQTD(SUM(Sales[Revenue]), Sales[Date])
 ```
 
-## 3.TOTALYTD :
+## 3. TOTALYTD
 
 TOTALYTD function is a DAX expression that is used to calculate cumulative total over the specified to YEAR of the given data to last date.
 
@@ -102,7 +105,7 @@ Example Syntax :
 Total Revenue YTD = TOTALYTD(SUM(Sales[Revenue]), Sales[Date])
 ```
 
-## 4.SAMEPERIODLASTYEAR :
+## 4. SAMEPERIODLASTYEAR
 
 SAMEPERIODLASTYEAR function is a DAX expression that is used to retrieve the dates of the last year. This function is useful for calculating year-to-year growth.
 
@@ -128,7 +131,7 @@ CALCULATE(
 )
 ```
 
-## 5.DATESINPERIOD :
+## 5. DATESINPERIOD
 
 DATESINPERIOD function is a DAX expression that is used to generate the table of specific date period.
 
