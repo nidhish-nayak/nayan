@@ -45,9 +45,9 @@ const tagCount = getTagCount();
 	</head>
 	<body>
 		<Header />
-		<main class="min-h-screen max-w-screen-2xl p-4">
-			<h2 class="p-0 m-0 mt-2 mb-8 dark:m-0 dark:mt-2 dark:mb-8">All Tags</h2>
-			<section class="flex flex-wrap gap-4">
+		<main class="p-4 mt-8 min-h-screen max-w-screen-2xl">
+			<h2 class="m-0 p-0 my-2 dark:m-0 dark:p-0 text-2xl">All Tags</h2>
+			<section class="flex flex-wrap border-t pt-[16px] items-start gap-4">
 				{
 					// Map through the tags and render a link for each tag with its count
 					tags.map((tag) => (
