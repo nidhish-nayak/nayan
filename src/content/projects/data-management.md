@@ -1,5 +1,5 @@
 ---
-title: e-Commerce Sales Dashboard
+title: Ecommerce Dashboard
 description: >-
   An e-commerce sales dashboard in Power BI is a visual analytics tool that
   provides a comprehensive and real-time overview of key performance indicators
