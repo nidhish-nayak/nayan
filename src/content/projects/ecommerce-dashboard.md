@@ -1,17 +1,18 @@
 ---
-title: e-Commerce Sales Dashboard
+title: Ecommerce Dashboard
 description: >-
   An e-commerce sales dashboard in Power BI is a visual analytics tool that
   provides a comprehensive and real-time overview of key performance indicators
   (KPIs) related to online sales activities
-pubDate: '2023-10-23T20:25:38+05:30'
+pubDate: "2023-10-23T20:25:38+05:30"
 image: /compressed.png
 tools:
   - Power BI
   - Excel
   - Power Query Editor
-github: 'https://github.com/nayan-malkhedkar/madhava-dashboard'
+github: "https://github.com/nayan-malkhedkar/madhava-dashboard"
 ---
+
 # e-Commerce Sales Dashboard
 
 An e-commerce sales dashboard in Power BI is a visual analytics tool that provides a comprehensive and real-time overview of key performance indicators (KPIs) related to online sales activities.
