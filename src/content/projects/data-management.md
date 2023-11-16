@@ -22,11 +22,11 @@ The Power BI E-commerce Sales Dashboard is a powerful tool designed to transform
 
 ## In this dashboard, we will showcase:
 
-**Sales Trends: **You will be able to see the top 5 states in which sales was highest in terms of Amount. We see Maharashtra state tops the Sales Amount compared to other states.** **
+**Sales Trends:** You will be able to see the top 5 states in which sales was highest in terms of Amount. We see Maharashtra state tops the Sales Amount compared to other states.
 
 ![Sales amount by States](/screenshot-2023-11-16-111928.png)
 
-**Profit by Sub-Category: **Analyzing the Sales by Sub-Category, we observe that Printers sales was high , which returned high profit. Bookcases and Sarees stands second and third place respectively in terms of total profit.
+**Profit by Sub-Category:** Analyzing the Sales by Sub-Category, we observe that Printers sales was high , which returned high profit. Bookcases and Sarees stands second and third place respectively in terms of total profit.
 
 ![Sales by sub-Category](/screenshot-2023-11-16-112214.png)
 
