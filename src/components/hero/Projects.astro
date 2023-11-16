@@ -27,7 +27,7 @@ const topProjects = projects.filter((project, index) => index <= 7);
 							class="before:invisible relative"
 							rel="prefetch-intent"
 						>
-							<div class="w-full sm:w-[400px] sm:h-[400px] justify-self-start float-right overflow-hidden">
+							<div class="w-full sm:w-[400px] drop-shadow-md sm:h-[400px] justify-self-start float-right overflow-hidden">
 								<Image
 									src={project.data.image}
 									width={400}
@@ -65,7 +65,7 @@ const topProjects = projects.filter((project, index) => index <= 7);
 								<a
 									href={project.data.github}
 									target="_blank"
-									class="dark:before:bg-white border border-dashed py-[2px] px-3 transition-all dark:border-zinc-700"
+									class="dark:before:bg-white border border-dashed border-zinc-400 py-[2px] px-3 transition-all dark:border-zinc-600"
 								>
 									Github &#8599;{" "}
 								</a>
@@ -113,7 +113,7 @@ const topProjects = projects.filter((project, index) => index <= 7);
 								<a
 									href={project.data.github}
 									target="_blank"
-									class="dark:before:bg-white border border-dashed py-[2px] px-3 transition-all dark:border-zinc-700"
+									class="dark:before:bg-white border border-zinc-400 border-dashed py-[2px] px-3 transition-all dark:border-zinc-600"
 								>
 									Github &#8599;{" "}
 								</a>
@@ -134,7 +134,7 @@ const topProjects = projects.filter((project, index) => index <= 7);
 							href={`/projects/${project.slug}`}
 							class="relative before:invisible"
 						>
-							<div class="w-full sm:w-[400px] sm:h-[400px]  justify-self-start float-left overflow-hidden">
+							<div class="w-full drop-shadow-md sm:w-[400px] sm:h-[400px] justify-self-start float-left overflow-hidden">
 								<Image
 									src={project.data.image}
 									width={400}
@@ -172,7 +172,7 @@ const topProjects = projects.filter((project, index) => index <= 7);
 								<a
 									href={project.data.github}
 									target="_blank"
-									class="dark:before:bg-white border border-dashed py-[2px] px-3 transition-all dark:border-zinc-700"
+									class="dark:before:bg-white border border-dashed boder-zinc-400 py-[2px] px-3 transition-all dark:border-zinc-600"
 								>
 									Github &#8599;{" "}
 								</a>
