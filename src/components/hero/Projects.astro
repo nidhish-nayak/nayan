@@ -27,7 +27,7 @@ const topProjects = projects.filter((project, index) => index <= 7);
 							class="before:invisible relative"
 							rel="prefetch-intent"
 						>
-							<div class="w-full sm:w-[400px] drop-shadow-md sm:h-[400px] justify-self-start float-right overflow-hidden">
+							<div class="w-full sm:w-[400px] sm:h-[400px] justify-self-start float-right overflow-hidden">
 								<Image
 									src={project.data.image}
 									width={400}
@@ -61,7 +61,7 @@ const topProjects = projects.filter((project, index) => index <= 7);
 									))}
 								</ul>
 							</div>
-							<div class="flex gap-8 mt-6 md:mt-0">
+							<div class="flex gap-8 mt-6 md:mt-8">
 								<a
 									href={project.data.github}
 									target="_blank"
@@ -109,7 +109,7 @@ const topProjects = projects.filter((project, index) => index <= 7);
 									))}
 								</ul>
 							</div>
-							<div class="flex gap-8">
+							<div class="flex gap-8 mt-6 md:mt-8">
 								<a
 									href={project.data.github}
 									target="_blank"
@@ -134,7 +134,7 @@ const topProjects = projects.filter((project, index) => index <= 7);
 							href={`/projects/${project.slug}`}
 							class="relative before:invisible"
 						>
-							<div class="w-full drop-shadow-md sm:w-[400px] sm:h-[400px] justify-self-start float-left overflow-hidden">
+							<div class="w-full sm:w-[400px] sm:h-[400px] justify-self-start float-left overflow-hidden">
 								<Image
 									src={project.data.image}
 									width={400}
@@ -168,7 +168,7 @@ const topProjects = projects.filter((project, index) => index <= 7);
 									))}
 								</ul>
 							</div>
-							<div class="flex gap-8 mt-6 md:mt-0">
+							<div class="flex gap-8 mt-6 md:mt-8">
 								<a
 									href={project.data.github}
 									target="_blank"

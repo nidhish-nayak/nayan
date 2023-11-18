@@ -1,11 +1,8 @@
 ---
-title: Super Store Sale Dashboard
+title: Super Store Dashboard
 description: >-
-  A Super Store sales dashboard is a visual representation of key performance
-  indicators and sales metrics for a retail business. It provides a concise and
-  interactive overview of various aspects of the store's sales performance,
-  allowing stakeholders to quickly analyze and make informed decisions.
-pubDate: '2023-10-18T17:46:34+05:30'
+  A Super Store sales dashboard visually summarizes key performance indicators and sales metrics for quick analysis and informed decision-making in retail.
+pubDate: "2023-11-18T17:46:34+05:30"
 image: /screenshot-2023-11-18-132506-min.png
 tools:
   - Power BI
@@ -14,8 +11,9 @@ tools:
   - Data Analysis
   - Power Query Editor
   - Dashboard
-github: 'https://github.com/nayan-malkhedkar/super-store-dashboard'
+github: "https://github.com/nayan-malkhedkar/super-store-dashboard"
 ---
+
 # Super Store Sales Dashboard
 
 A Super Store sales dashboard is a visual representation of key performance indicators and sales metrics for a retail business. It provides a concise and interactive overview of various aspects of the store's sales performance, allowing stakeholders to quickly analyze and make informed decisions.
@@ -34,7 +32,7 @@ This dashboard serves as a centralized hub, offering at-a-glance access to criti
 
 ![Monthly Sales by YoY](/screenshot-2023-11-18-134318.png)
 
-**Profit by Category:** Profit by Category visual, we can observe that Technology category recorded the highest profit and thereafter Office Supplies and Furniture comes in the 2nd and 3rd place respectively. 
+**Profit by Category:** Profit by Category visual, we can observe that Technology category recorded the highest profit and thereafter Office Supplies and Furniture comes in the 2nd and 3rd place respectively.
 
 ![Profit by Category](/screenshot-2023-11-18-134652.png)
 
