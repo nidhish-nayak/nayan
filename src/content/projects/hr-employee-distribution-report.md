@@ -1,11 +1,10 @@
 ---
-title: HR Employee Distribution Report
+title: HR Employee Distribution
 description: >-
-  The HR Employee Distribution Power BI dashboard is a dynamic and visually
-  engaging tool designed to offer real-time insights into the composition of
-  your workforce. This user-friendly dashboard leverages Power BI's capabilities
-  to present key metrics, such as departmental headcounts, role distributions,
-  and geographical spread, in an interactive and customizable format.
+  The HR Employee Distribution Dashboard is a visually engaging tool designed to
+  offer real-time insights into your workforce. This dashboard leverages Power
+  BI's capabilities to present key metrics, such as departmental headcounts,
+  role distributions, and geographical spread in an interactive format.
 pubDate: '2024-01-06T12:40:03+05:30'
 image: /hr.webp
 tools:
@@ -24,7 +23,7 @@ The HR Employee Distribution report provides a comprehensive overview of the org
 
 ## In this dashboard, we will showcase:
 
-**Age Distribution: **By looking at the dashboard, we would see that age group 25-34 and 35-44 both the age groups have almost same number of employees and its around 5k.
+**Age Distribution:** By looking at the dashboard, we would see that age group 25-34 and 35-44 both the age groups have almost same number of employees and its around 5k.
 
 ![Age Distribution](/1.png)
 
